@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navigation, Footer, Home, About, Events, SingleEvent } from "./components";
+import {Home, About, Events, SingleEvent } from "./components/pages";
+import {Navigation, Footer } from "./components";
 
 function App() {
   return (

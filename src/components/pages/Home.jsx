@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import { Button } from "reakit/Button";
+
+function Example() {
+  return <Button>Button</Button>;
+}
+
 class Home extends Component {
   render() {
     return (
@@ -8,6 +14,7 @@ class Home extends Component {
                 <p>
                 Edit <code>src/App.js</code> and save to reload.
                 </p>
+                <Example />
                 <a
                 className="App-link"
                 href="https://reactjs.org"
