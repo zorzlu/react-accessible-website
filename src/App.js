@@ -1,13 +1,13 @@
-import './App.css';
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import {Home, About, Events, SingleEvent } from "./components/pages";
-import {Navigation, Footer } from "./components";
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { About, Events, Home, SingleEvent } from './pages';
+import { Navigation, Footer } from './components';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-       <Router>
+    <ChakraProvider theme={theme}>
+      <Router>
         <Navigation />
         <Switch>
           <Route path="/" exact component={() => <Home />} />
@@ -17,7 +17,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </ChakraProvider>
   );
 }
 

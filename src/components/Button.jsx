@@ -6,7 +6,7 @@ const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
 
 const SIZES = ['btn--medium', 'btn--large'];
 
-export const Button = ({
+const Button = ({
   // eslint-disable-next-line react/prop-types
   children,
   // eslint-disable-next-line react/prop-types
@@ -16,7 +16,7 @@ export const Button = ({
   // eslint-disable-next-line react/prop-types
   buttonStyle,
   // eslint-disable-next-line react/prop-types
-  buttonSize
+  buttonSize,
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
@@ -25,7 +25,7 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to="/sign-up" className="btn-mobile">
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
@@ -36,3 +36,5 @@ export const Button = ({
     </Link>
   );
 };
+
+export default Button;

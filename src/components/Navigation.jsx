@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from './Button';
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from 'react-router-dom';
 import './Navigation.css';
+import Button from './Button';
 
 //TODO fix
 function Navigation(props) {
-
   const [button, setButton] = useState(true);
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -44,7 +43,7 @@ function Navigation(props) {
             <ul className="navbar-nav ml-auto">
               <li
                 className={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
+                  props.location.pathname === '/' ? 'active' : ''
                 }`}
               >
                 <Link className="nav-link" to="/">
@@ -54,7 +53,7 @@ function Navigation(props) {
               </li>
               <li
                 className={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
+                  props.location.pathname === '/about' ? 'active' : ''
                 }`}
               >
                 <Link className="nav-link" to="/about">
@@ -63,7 +62,7 @@ function Navigation(props) {
               </li>
               <li
                 className={`nav-item  ${
-                  props.location.pathname === "/events" ? "active" : ""
+                  props.location.pathname === '/events' ? 'active' : ''
                 }`}
               >
                 <Link className="nav-link" to="/events">
@@ -71,7 +70,7 @@ function Navigation(props) {
                 </Link>
               </li>
             </ul>
-            {button && <Button buttonStyle='btn--primary'>SIGN UP</Button>}
+            {button && <Button buttonStyle="btn--primary">SIGN UP</Button>}
           </div>
         </div>
       </nav>
@@ -79,9 +78,8 @@ function Navigation(props) {
   );
 }
 
-
 Navigation.propTypes = {
-    location: PropTypes.object
-}
+  location: PropTypes.object,
+};
 
 export default withRouter(Navigation);
