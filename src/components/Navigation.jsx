@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Button } from './Button';
 import { Link, withRouter } from "react-router-dom";
-
+import './Navigation.css';
 
 //TODO fix
 function Navigation(props) {
+
+  const [button, setButton] = useState(true);
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -54,6 +71,7 @@ function Navigation(props) {
                 </Link>
               </li>
             </ul>
+            {button && <Button buttonStyle='btn--primary'>SIGN UP</Button>}
           </div>
         </div>
       </nav>

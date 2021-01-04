@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {Home, About, Events, SingleEvent } from "./components/pages";
-import {Navigation, Footer } from "./components";
+import {Navigation, Footer, Button } from "./components";
 
 function App() {
   return (
