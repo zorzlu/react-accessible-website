@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-//import { Link, withRouter } from 'react-router-dom';
-//import Button from './Button';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link, Box, Flex, Text, Stack } from '@chakra-ui/react';
 import Logo from './Logo';
 
@@ -54,7 +53,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
   return (
-    <Link href={to}>
+    <Link as={RouterLink} to={to}>
       <Text display="block" {...rest}>
         {children}
       </Text>
@@ -68,8 +67,8 @@ MenuToggle.propTypes = {
 };
 
 MenuItem.propTypes = {
-  children: PropTypes.any,
-  to: PropTypes.any,
+  children: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
 };
 
 const MenuLinks = ({ isOpen }) => {
@@ -87,9 +86,7 @@ const MenuLinks = ({ isOpen }) => {
       >
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/events">Activities </MenuItem>
-        <MenuItem to="/about" isLast>
-          About us
-        </MenuItem>
+        <MenuItem to="/about">About us</MenuItem>
       </Stack>
     </Box>
   );
@@ -121,82 +118,5 @@ const NavBarContainer = ({ children, ...props }) => {
 NavBarContainer.propTypes = {
   children: PropTypes.any,
 };
-
-// function Navigation(props) {
-//   const [button, setButton] = useState(true);
-//   const showButton = () => {
-//     if (window.innerWidth <= 960) {
-//       setButton(false);
-//     } else {
-//       setButton(true);
-//     }
-//   };
-
-//   useEffect(() => {
-//     showButton();
-//   }, []);
-
-//   window.addEventListener('resize', showButton);
-
-//   return (
-//     <div className="navigation">
-//       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-//         <div className="container">
-//           <Link className="navbar-brand" to="/">
-//             React Multi-Page Website
-//           </Link>
-//           <button
-//             className="navbar-toggler"
-//             type="button"
-//             data-toggle="collapse"
-//             data-target="#navbarResponsive"
-//             aria-controls="navbarResponsive"
-//             aria-expanded="false"
-//             aria-label="Toggle navigation"
-//           >
-//             <span className="navbar-toggler-icon"></span>
-//           </button>
-//           <div className="collapse navbar-collapse" id="navbarResponsive">
-//             <ul className="navbar-nav ml-auto">
-//               <li
-//                 className={`nav-item  ${
-//                   props.location.pathname === '/' ? 'active' : ''
-//                 }`}
-//               >
-//                 <Link className="nav-link" to="/">
-//                   Home
-//                   <span className="sr-only">(current)</span>
-//                 </Link>
-//               </li>
-//               <li
-//                 className={`nav-item  ${
-//                   props.location.pathname === '/about' ? 'active' : ''
-//                 }`}
-//               >
-//                 <Link className="nav-link" to="/about">
-//                   About
-//                 </Link>
-//               </li>
-//               <li
-//                 className={`nav-item  ${
-//                   props.location.pathname === '/events' ? 'active' : ''
-//                 }`}
-//               >
-//                 <Link className="nav-link" to="/events">
-//                   Events
-//                 </Link>
-//               </li>
-//             </ul>
-//             {button && <Button buttonStyle="btn--primary">SIGN UP</Button>}
-//           </div>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// }
-
-// Navigation.propTypes = {
-//   location: PropTypes.object,
-// };
 
 export default Navigation;
