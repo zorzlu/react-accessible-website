@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import { Box, Text, Link, VStack, Code, Grid } from '@chakra-ui/react';
-import { ColorModeSwitcher, Logo } from '../components';
-
+import { Box, Flex } from '@chakra-ui/react';
+import { Hero } from '../components';
 
 class Home extends Component {
   render() {
     return (
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
+        <Flex
+          direction="column"
+          align="center"
+          // maxW={{ xl: '6000px' }}
+          // m="0 auto"
+        >
+          <Hero />
+        </Flex>
+        {/* <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
@@ -24,7 +31,7 @@ class Home extends Component {
               Learn Chakra
             </Link>
           </VStack>
-        </Grid>
+        </Grid> */}
       </Box>
     );
   }

@@ -14,6 +14,7 @@ const Navigation = (props) => {
       <Logo
         w="100px"
         color={['white', 'white', 'primary.500', 'primary.500']}
+        alt="Application logo"
       />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />

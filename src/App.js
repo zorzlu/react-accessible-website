@@ -9,7 +9,7 @@ function App({ events }) {
   return (
     <ChakraProvider theme={theme}>
       <Router>
-        <Navigation />
+        <Navigation role="navigation" />
         <Switch>
           <Route path="/" exact component={() => <Home />} />
           <Route path="/about" exact component={() => <About />} />
@@ -25,7 +25,7 @@ function App({ events }) {
             component={() => <SingleEvent evList={events} />}
           />
         </Switch>
-        <Footer />
+        <Footer role="contentinfo" />
       </Router>
     </ChakraProvider>
   );
