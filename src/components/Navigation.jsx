@@ -40,7 +40,7 @@ const MenuItem = ({ children, to = '/', ...rest }) => {
 
 MenuToggle.propTypes = {
   toggle: PropTypes.any,
-  isOpen: PropTypes.any,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 MenuItem.propTypes = {
@@ -65,13 +65,14 @@ const MenuLinks = ({ isOpen }) => {
 
         <MenuItem to="/events">Events </MenuItem>
         <MenuItem to="/about">About us</MenuItem>
+        <MenuItem to="/join">Join</MenuItem>
       </Stack>
     </Box>
   );
 };
 
 MenuLinks.propTypes = {
-  isOpen: PropTypes.any,
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default Navigation;
