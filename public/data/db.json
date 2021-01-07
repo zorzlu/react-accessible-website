@@ -54,5 +54,8 @@
       "pictures": ["logo512.png", "logo192.png"],
       "altPictures": ["your summer image 1", "your summer image 2"]
     }
-  ]
+  ],
+  "recommendedEvents": [1, 2, 3],
+  "locations": ["rome", "milan", "tallin", "madrid"],
+  "categories": ["cats", "dogs", "owls", "pigs"]
 }

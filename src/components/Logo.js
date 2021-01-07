@@ -17,6 +17,7 @@ const Logo = (props) => {
     <Image
       animation={animation}
       src={process.env.PUBLIC_URL + 'logo.svg'}
+      alt="Application "
       {...props}
     />
   );
