@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Box, Heading, Link, VStack, Code, Grid } from '@chakra-ui/react';
-import { Logo } from '../components';
+import { Box, Flex } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
 import { LiveMessage } from 'react-aria-live';
+import { Hero } from '../components';
 
 class Home extends Component {
   constructor(props) {

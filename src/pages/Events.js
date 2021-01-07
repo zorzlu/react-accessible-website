@@ -10,7 +10,7 @@ function EventsList({ evList }) {
     <li key={element.id}>
       <Link
         as={RouterLink}
-        color="red.200"
+        color="red.700"
         to={'/events/' + element.id}
         fontSize="2xl"
       >

@@ -2,7 +2,14 @@ import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav';
 import PropTypes from 'prop-types';
-import { About, Events, Home, PageNotFound } from './pages';
+import {
+  About,
+  Events,
+  Home,
+  JoinEvent,
+  EventDetails,
+  PageNotFound,
+} from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Header, Footer, Logo, Navigation } from './components';
 import { OurTheme } from './theme';
@@ -74,12 +81,24 @@ class App extends React.Component {
                     )}
                   />
                   <Route
+                    path="/events/:eventId/register"
+                    exact
+                    component={() => (
+                      <EventChecker
+                        db={this.props.db}
+                        setNewPage={this.setNewPage}
+                        PageToLoad={JoinEvent}
+                      />
+                    )}
+                  />
+                  <Route
                     path="/events/:eventId"
                     exact
                     component={() => (
                       <EventChecker
                         db={this.props.db}
                         setNewPage={this.setNewPage}
+                        PageToLoad={EventDetails}
                       />
                     )}
                   />

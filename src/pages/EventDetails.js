@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Text, Image, Stack, Heading } from '@chakra-ui/react';
+import { Text, Image, Stack, Heading, Link } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
+import { Link as RouterLink } from 'react-router-dom';
 
 //This is a template, not a fully implemented webpage
 
@@ -41,6 +42,13 @@ class EventDetails extends Component {
             alt={this.props.details.altPictures[1]}
           />
         </Stack>
+        <Link
+          as={RouterLink}
+          to={'/events/' + this.props.details['id'] + '/register'}
+          fontSize="2xl"
+        >
+          JOIN
+        </Link>
         <Text>{this.props.details.longDescription}</Text>
       </React.Fragment>
     );

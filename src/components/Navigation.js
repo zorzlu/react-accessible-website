@@ -65,7 +65,6 @@ const MenuLinks = ({ isOpen }) => {
 
         <MenuItem to="/events">Events </MenuItem>
         <MenuItem to="/about">About us</MenuItem>
-        <MenuItem to="/join">Join</MenuItem>
       </Stack>
     </Box>
   );
