@@ -7,6 +7,7 @@
     "@chakra-ui/skip-nav": "^1.0.2",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@hookform/resolvers": "^1.3.2",
     "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.6.0",
@@ -15,10 +16,12 @@
     "react": "^17.0.1",
     "react-aria-live": "^2.0.5",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.14.0",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
   },
   "scripts": {
     "start": "react-scripts start",
