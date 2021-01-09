@@ -56,90 +56,92 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isInvalid={errors.firstname}>
-        <FormLabel htmlFor="name">First name</FormLabel>
-        <Input
-          name="firstname"
-          placeholder="First name"
-          ref={register({ validate: validateFirstName })}
-          aria-label="Firstname"
-        />
-        <FormErrorMessage>
-          {errors.firstname && errors.firstname.message}
-        </FormErrorMessage>
-      </FormControl>
-      <FormControl isInvalid={errors.lastname}>
-        <FormLabel htmlFor="name">Last name</FormLabel>
-        <Input
-          name="lastname"
-          placeholder="Last name"
-          ref={register({ validate: validateLastName })}
-          aria-label="Lasttname"
-        />
-        <FormErrorMessage>
-          {errors.lastname && errors.lastname.message}
-        </FormErrorMessage>
-      </FormControl>
-      <FormControl isInvalid={errors.email}>
-        <FormLabel htmlFor="name">Email</FormLabel>
-        <Input
-          name="email"
-          placeholder="Email"
-          ref={register({ validate: validateEmail })}
-          aria-label="Email"
-        />
-        <FormErrorMessage>
-          {errors.email && errors.email.message}
-        </FormErrorMessage>
-      </FormControl>
-      <FormControl isInvalid={errors.phone}>
-        <FormLabel htmlFor="name">Phone number</FormLabel>
-        <Input
-          name="phone"
-          placeholder="Phone number"
-          ref={register({ validate: validatePhone })}
-          aria-label="Phone number"
-        />
-        <FormErrorMessage>
-          {errors.phone && errors.phone.message}
-        </FormErrorMessage>
-      </FormControl>
-      <FormControl>
-        <FormLabel htmlFor="skills">Skills</FormLabel>
-        <Stack pl={6} mt={1} spacing={1}>
-          <Checkbox name="skills" value="skill 1">
-            Skill 1
-          </Checkbox>
-          <Checkbox name="skills" value="skill 2">
-            Skill 2
-          </Checkbox>
-          <Checkbox name="skills" value="skill 3">
-            Skill 3
-          </Checkbox>
-          <Checkbox name="skills" value="skill 4">
-            Skill 4
-          </Checkbox>
-          <Checkbox name="skills" value="skill 5">
-            Skill 5
-          </Checkbox>
-        </Stack>
-      </FormControl>
-      <FormControl>
-        <FormLabel htmlFor="motivation">Motivation</FormLabel>
-        <Textarea
-          name="motivation"
-          aria-label="Motivation"
-          placeholder="Here you can type in your motivation"
-        />
-      </FormControl>
-      <Button
-        mt={4}
-        colorScheme="teal"
-        isLoading={formState.isSubmitting}
-        type="submit"
-      >
-        Submit
-      </Button>
+      <Stack spacing={2}>
+        <FormControl isInvalid={errors.firstname}>
+          <FormLabel htmlFor="name">First name</FormLabel>
+          <Input
+            name="firstname"
+            placeholder="First name"
+            ref={register({ validate: validateFirstName })}
+            aria-label="Firstname"
+          />
+          <FormErrorMessage>
+            {errors.firstname && errors.firstname.message}
+          </FormErrorMessage>
+        </FormControl>
+        <FormControl isInvalid={errors.lastname}>
+          <FormLabel htmlFor="name">Last name</FormLabel>
+          <Input
+            name="lastname"
+            placeholder="Last name"
+            ref={register({ validate: validateLastName })}
+            aria-label="Lasttname"
+          />
+          <FormErrorMessage>
+            {errors.lastname && errors.lastname.message}
+          </FormErrorMessage>
+        </FormControl>
+        <FormControl isInvalid={errors.email}>
+          <FormLabel htmlFor="name">Email</FormLabel>
+          <Input
+            name="email"
+            placeholder="Email"
+            ref={register({ validate: validateEmail })}
+            aria-label="Email"
+          />
+          <FormErrorMessage>
+            {errors.email && errors.email.message}
+          </FormErrorMessage>
+        </FormControl>
+        <FormControl isInvalid={errors.phone}>
+          <FormLabel htmlFor="name">Phone number</FormLabel>
+          <Input
+            name="phone"
+            placeholder="Phone number"
+            ref={register({ validate: validatePhone })}
+            aria-label="Phone number"
+          />
+          <FormErrorMessage>
+            {errors.phone && errors.phone.message}
+          </FormErrorMessage>
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="skills">Skills</FormLabel>
+          <Stack pl={6} mt={1} spacing={1}>
+            <Checkbox name="skills" value="skill 1">
+              Skill 1
+            </Checkbox>
+            <Checkbox name="skills" value="skill 2">
+              Skill 2
+            </Checkbox>
+            <Checkbox name="skills" value="skill 3">
+              Skill 3
+            </Checkbox>
+            <Checkbox name="skills" value="skill 4">
+              Skill 4
+            </Checkbox>
+            <Checkbox name="skills" value="skill 5">
+              Skill 5
+            </Checkbox>
+          </Stack>
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="motivation">Motivation</FormLabel>
+          <Textarea
+            name="motivation"
+            aria-label="Motivation"
+            placeholder="Here you can type in your motivation"
+          />
+        </FormControl>
+        <Button
+          mt={4}
+          colorScheme="teal"
+          isLoading={formState.isSubmitting}
+          type="submit"
+        >
+          Submit
+        </Button>
+      </Stack>
     </form>
   );
 };
