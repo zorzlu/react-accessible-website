@@ -7,7 +7,7 @@ import textStyles from './textstyles';
 import shadows from './foundations/shadows';
 
 // Component style overrides
-//import Button from './components/button';
+import Container from './components/container';
 
 const overrides = {
   styles,
@@ -15,7 +15,7 @@ const overrides = {
   textStyles,
   // Other foundational style overrides go here
   components: {
-    //Button,
+    Container,
     // Other components go here
   },
 };

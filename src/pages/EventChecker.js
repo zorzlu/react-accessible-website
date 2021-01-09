@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
-import { PageNotFound } from '../pages';
+import { PageNotFound } from '.';
 
 function EventChecker({ db, setNewPage, PageToLoad }) {
   let { eventId } = useParams();

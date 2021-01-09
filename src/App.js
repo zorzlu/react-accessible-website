@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import { Center, ChakraProvider, Container } from '@chakra-ui/react';
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav';
 import PropTypes from 'prop-types';
 import {
@@ -11,10 +11,10 @@ import {
   PageNotFound,
 } from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Header, Footer, Logo, Navigation } from './components';
+import { Footer, Logo, Navigation, Header } from './components';
 import { OurTheme } from './theme';
 import { LiveAnnouncer } from 'react-aria-live';
-import EventChecker from './utils/EventChecker';
+import EventChecker from './pages/EventChecker';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,64 +53,73 @@ class App extends React.Component {
                   Skip to Main
                 </SkipNavLink>
               </div>
-              <Header>
-                <Logo height="2em" />
-                <SkipNavContent id="navigation">
-                  <Navigation />
+              <Center as="header">
+                <Header>
+                  <Logo height="3em" />
+                  <SkipNavContent height="inherit" id="navigation">
+                    <Navigation />
+                  </SkipNavContent>
+                </Header>
+              </Center>
+              <Container as="main" size="pageContainer">
+                <SkipNavContent id="main">
+                  <Switch>
+                    <Route
+                      path="/"
+                      exact
+                      component={() => (
+                        <Home db={this.props.db} setNewPage={this.setNewPage} />
+                      )}
+                    />
+                    <Route
+                      path="/about"
+                      exact
+                      component={() => <About setNewPage={this.setNewPage} />}
+                    />
+                    <Route
+                      path="/event/:eventId/register"
+                      exact
+                      component={() => (
+                        <EventChecker
+                          db={this.props.db}
+                          setNewPage={this.setNewPage}
+                          PageToLoad={JoinEvent}
+                        />
+                      )}
+                    />
+                    <Route
+                      path="/event/:eventId"
+                      exact
+                      component={() => (
+                        <EventChecker
+                          db={this.props.db}
+                          setNewPage={this.setNewPage}
+                          PageToLoad={EventDetails}
+                        />
+                      )}
+                    />
+                    <Route
+                      path="/events"
+                      component={() => (
+                        <Events
+                          db={this.props.db}
+                          setNewPage={this.setNewPage}
+                        />
+                      )}
+                    />
+
+                    <Route
+                      path="*"
+                      component={() => (
+                        <PageNotFound setNewPage={this.setNewPage} />
+                      )}
+                    />
+                  </Switch>
                 </SkipNavContent>
-              </Header>
-              <SkipNavContent as="main" id="main">
-                <Switch>
-                  <Route
-                    path="/"
-                    exact
-                    component={() => (
-                      <Home db={this.props.db} setNewPage={this.setNewPage} />
-                    )}
-                  />
-                  <Route
-                    path="/about"
-                    exact
-                    component={() => <About setNewPage={this.setNewPage} />}
-                  />
-                  <Route
-                    path="/events"
-                    exact
-                    component={() => (
-                      <Events db={this.props.db} setNewPage={this.setNewPage} />
-                    )}
-                  />
-                  <Route
-                    path="/events/:eventId/register"
-                    exact
-                    component={() => (
-                      <EventChecker
-                        db={this.props.db}
-                        setNewPage={this.setNewPage}
-                        PageToLoad={JoinEvent}
-                      />
-                    )}
-                  />
-                  <Route
-                    path="/events/:eventId"
-                    exact
-                    component={() => (
-                      <EventChecker
-                        db={this.props.db}
-                        setNewPage={this.setNewPage}
-                        PageToLoad={EventDetails}
-                      />
-                    )}
-                  />
-                  <Route
-                    path="*"
-                    component={() => (
-                      <PageNotFound setNewPage={this.setNewPage} />
-                    )}
-                  />
-                </Switch>
-              </SkipNavContent>
-              <Footer role="contentinfo" />
+              </Container>
+              <Container as="footer" size="footer">
+                <Footer />
+              </Container>
             </Router>
           </ChakraProvider>
         </LiveAnnouncer>

@@ -5,15 +5,16 @@ import { Flex } from '@chakra-ui/react';
 const Header = ({ children, ...props }) => {
   return (
     <Flex
-      as="header"
       align="center"
+      height="inherit"
       justify="space-between"
       wrap="wrap"
+      maxW="75em"
       w="100%"
-      mb={8}
-      p={8}
+      p="1.5em"
       bg="transparent"
       color="primary.700"
+      borderColor="black"
       {...props}
     >
       {children}

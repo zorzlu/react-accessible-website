@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "event 0",
-      "categories": ["dogs", "cats"],
+      "tags": ["dogs", "cats"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Madrid",
       "full": false,
@@ -21,7 +21,7 @@
     {
       "id": 1,
       "name": "event 1",
-      "categories": ["dogs", "pigs"],
+      "tags": ["dogs", "pigs"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Milan",
       "full": false,
@@ -39,7 +39,7 @@
     {
       "id": 2,
       "name": "event 2",
-      "categories": ["owls", "cats"],
+      "tags": ["owls", "cats"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Rome",
       "full": false,
@@ -57,5 +57,5 @@
   ],
   "recommendedEvents": [1, 2, 3],
   "locations": ["rome", "milan", "tallin", "madrid"],
-  "categories": ["cats", "dogs", "owls", "pigs"]
+  "tags": ["cats", "dogs", "owls", "pigs"]
 }

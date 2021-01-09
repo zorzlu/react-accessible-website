@@ -44,7 +44,7 @@ class EventDetails extends Component {
         </Stack>
         <Link
           as={RouterLink}
-          to={'/events/' + this.props.details['id'] + '/register'}
+          to={'/event/' + this.props.details['id'] + '/register'}
           fontSize="2xl"
         >
           JOIN
