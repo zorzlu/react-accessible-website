@@ -12,6 +12,7 @@
     "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.6.0",
     "framer-motion": "^3.1.2",
+    "next-link": "^2.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-aria-live": "^2.0.5",

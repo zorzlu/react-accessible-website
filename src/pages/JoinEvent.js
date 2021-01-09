@@ -1,7 +1,8 @@
 import React from 'react';
-import { Center, Heading } from '@chakra-ui/react';
+import { Box, Heading } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import PropTypes from 'prop-types';
+import Form from '../components/Form';
 
 class JoinEvent extends React.Component {
   constructor(props) {
@@ -25,14 +26,9 @@ class JoinEvent extends React.Component {
         <Heading as="h1" size="xl">
           {'Register to ' + this.props.details['name']}
         </Heading>
-        <Center
-          bg="gray.200"
-          w="350px"
-          p={3}
-          m={10}
-          boxShadow="sm"
-          rounded="lg"
-        ></Center>
+        <Box maxW={96} p={10} mt={5} boxShadow="sm" rounded="lg">
+          <Form role="form" />
+        </Box>
       </React.Fragment>
     );
   }
