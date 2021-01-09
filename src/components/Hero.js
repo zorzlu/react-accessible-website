@@ -1,7 +1,7 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Box, Flex, Image, Heading, Stack } from '@chakra-ui/react';
+import { Box, Flex, Image, Heading, Stack, Text } from '@chakra-ui/react';
 
 export default function Hero({ title, description, image }) {
   return (
@@ -28,8 +28,7 @@ export default function Hero({ title, description, image }) {
         >
           {title}
         </Heading>
-        <Heading
-          as="h2"
+        <Text
           size="md"
           color="primary.800"
           opacity="0.8"
@@ -38,7 +37,7 @@ export default function Hero({ title, description, image }) {
           textAlign={['center', 'center', 'left', 'left']}
         >
           {description}
-        </Heading>
+        </Text>
       </Stack>
       <Box w={{ base: '80%', sm: '60%', md: '50%' }} mb={{ base: 12, md: 0 }}>
         <Image
