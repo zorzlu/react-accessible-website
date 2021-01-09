@@ -64,6 +64,7 @@ const Form = () => {
             placeholder="First name"
             ref={register({ validate: validateFirstName })}
             aria-label="Firstname"
+            bg="white"
           />
           <FormErrorMessage>
             {errors.firstname && errors.firstname.message}
@@ -76,6 +77,7 @@ const Form = () => {
             placeholder="Last name"
             ref={register({ validate: validateLastName })}
             aria-label="Lasttname"
+            bg="white"
           />
           <FormErrorMessage>
             {errors.lastname && errors.lastname.message}
@@ -88,6 +90,7 @@ const Form = () => {
             placeholder="Email"
             ref={register({ validate: validateEmail })}
             aria-label="Email"
+            bg="white"
           />
           <FormErrorMessage>
             {errors.email && errors.email.message}
@@ -100,6 +103,7 @@ const Form = () => {
             placeholder="Phone number"
             ref={register({ validate: validatePhone })}
             aria-label="Phone number"
+            bg="white"
           />
           <FormErrorMessage>
             {errors.phone && errors.phone.message}
@@ -108,19 +112,19 @@ const Form = () => {
         <FormControl>
           <FormLabel htmlFor="skills">Skills</FormLabel>
           <Stack pl={6} mt={1} spacing={1}>
-            <Checkbox name="skills" value="skill 1">
+            <Checkbox name="skills" value="skill 1" ref={register}>
               Skill 1
             </Checkbox>
-            <Checkbox name="skills" value="skill 2">
+            <Checkbox name="skills" value="skill 2" ref={register}>
               Skill 2
             </Checkbox>
-            <Checkbox name="skills" value="skill 3">
+            <Checkbox name="skills" value="skill 3" ref={register}>
               Skill 3
             </Checkbox>
-            <Checkbox name="skills" value="skill 4">
+            <Checkbox name="skills" value="skill 4" ref={register}>
               Skill 4
             </Checkbox>
-            <Checkbox name="skills" value="skill 5">
+            <Checkbox name="skills" value="skill 5" ref={register}>
               Skill 5
             </Checkbox>
           </Stack>
@@ -131,6 +135,8 @@ const Form = () => {
             name="motivation"
             aria-label="Motivation"
             placeholder="Here you can type in your motivation"
+            ref={register}
+            bg="white"
           />
         </FormControl>
         <Button
