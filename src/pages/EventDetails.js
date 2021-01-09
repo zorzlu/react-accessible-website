@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
   Box,
+  Button,
   Flex,
   Text,
   Image,
-  Link,
   Stack,
   Heading,
   UnorderedList,
@@ -92,16 +92,14 @@ class EventDetails extends Component {
             >
               {'Association: ' + this.props.details.association}
             </Text>
-            <Link
+            <Button
               as={RouterLink}
               to={'/event/' + this.props.details['id'] + '/register'}
-              border="1px"
-              rounded="1rem"
-              p="3"
-              fontWeight="bold"
+              variant="outline"
+              colorScheme="black"
             >
               Apply now
-            </Link>
+            </Button>
           </Stack>
           <Box
             w={{ base: '80%', sm: '60%', md: '50%' }}
@@ -119,53 +117,49 @@ class EventDetails extends Component {
             />
           </Box>
         </Flex>
-        <Flex>
-          <Stack spacing={1}>
-            <Heading
-              textStyle="h2"
-              lineHeight={2}
-              textAlign={['center', 'center', 'left', 'left']}
-            >
-              {'Description of the event'}
-            </Heading>
-            <Text
-              textStyle="paragraph"
-              lineHeight={2}
-              textAlign={['center', 'center', 'left', 'left']}
-            >
-              {this.props.details.longDescription}
-            </Text>
-            <Heading
-              textStyle="h2"
-              lineHeight={2}
-              textAlign={['center', 'center', 'left', 'left']}
-            >
-              {'Activities'}
-            </Heading>
-            <Text
-              textStyle="paragraph"
-              lineHeight={2}
-              textAlign={['center', 'center', 'left', 'left']}
-            >
-              <UnorderedList>
-                {this.props.details.activities.map((listitem) => (
-                  <ListItem>{listitem}</ListItem>
-                ))}
-              </UnorderedList>
-            </Text>
-            <Link
-              as={RouterLink}
-              to={'/event/' + this.props.details['id'] + '/register'}
-              border="1px"
-              rounded="1rem"
-              p="3"
-              fontWeight="bold"
-              w="10%"
-            >
-              Apply now
-            </Link>
-          </Stack>
-        </Flex>
+        <Heading
+          textStyle="h2"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+        >
+          {'Description of the event'}
+        </Heading>
+        <Text
+          textStyle="paragraph"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+        >
+          {this.props.details.longDescription}
+        </Text>
+        <Heading
+          textStyle="h2"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+        >
+          {'Activities'}
+        </Heading>
+        <Text
+          textStyle="paragraph"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+        >
+          <UnorderedList>
+            {this.props.details.activities.map((listitem) => (
+              <ListItem>{listitem}</ListItem>
+            ))}
+          </UnorderedList>
+        </Text>
+        <br></br>
+        <br></br>
+
+        <Button
+          as={RouterLink}
+          to={'/event/' + this.props.details['id'] + '/register'}
+          variant="outline"
+          colorScheme="black"
+        >
+          Apply now
+        </Button>
       </React.Fragment>
     );
   }
