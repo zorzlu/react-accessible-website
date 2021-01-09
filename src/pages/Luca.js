@@ -2,7 +2,7 @@ import React from 'react';
 //import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useQueryAsState } from '../utils/QueryAsState';
-import { Checkbox } from '@chakra-ui/react';
+import { Checkbox, CheckboxGroup, HStack } from '@chakra-ui/react';
 
 /* function getParameters() {
   let parameters = window.location.search.replace('?', '');
@@ -23,7 +23,11 @@ import { Checkbox } from '@chakra-ui/react';
  */
 
 function Luca({ db }) {
-  const [{ query }] = useQueryAsState();
+  const [query, updateQueryParams] = useQueryAsState({
+    tag: db.tag,
+    location: db.location,
+  });
+
   //const { search } = useLocation();
   //const searchParams = new URLSearchParams(search);
   //let locations = searchParams.getAll('location');
@@ -32,11 +36,20 @@ function Luca({ db }) {
 
   return (
     <div>
-      <p>Locations: </p>
-      <p>{query}</p>
+      <CheckboxGroup
+        colorScheme="green"
+        value={query.tag}
+        onChange={(values) => updateQueryParams({ tag: values })}
+      >
+        <HStack>
+          <Checkbox value="dogs">dogs</Checkbox>
+          <Checkbox value="mele">mele</Checkbox>
+          <Checkbox value="cats">cats</Checkbox>
+        </HStack>
+      </CheckboxGroup>
 
       <Checkbox
-        onChange={({ target }) => useQueryAsState({ query: target.value })}
+        onChange={({ target }) => updateQueryParams({ query: target.value })}
       >
         old
       </Checkbox>

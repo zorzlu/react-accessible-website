@@ -1,20 +1,18 @@
-export const getQueryParamsAsObject = (search, acceptedValues) => {
-  var paramsFromURL = {};
-  var finalParams = {};
-
-  new URLSearchParams(search).forEach((value, key) => {
-    if (paramsFromURL[key].includes(value) === false)
-      paramsFromURL[key].push(value);
+function addElementToArray(array, value) {
+  if (array === undefined) return [value];
+  else if (array.includes(value) === false) {
+    let temp = array;
+    temp.push(value);
+    return temp;
+  }
+}
+function buildFullEmptyObj(keysToUse) {
+  let temp = {};
+  keysToUse.forEach((element) => {
+    temp[element] = [];
   });
-
-  Object.keys(acceptedValues).forEach((key) => {
-    let temp = acceptedValues[key].filter((x) =>
-      paramsFromURL[key].map((y) => y.toLowerCase()).includes(x.toLowerCase())
-    );
-    finalParams[key] = temp;
-  });
-  return finalParams;
-};
+  return temp;
+}
 
 export const removeUndefined = (obj) =>
   Object.keys(obj)
@@ -24,9 +22,38 @@ export const removeUndefined = (obj) =>
       return temp;
     }, {});
 
-export const objectToQueryParams = (obj) =>
-  '?' +
-  Object.keys(obj)
-    .filter((key) => obj[key].length > 0)
-    .map((key) => obj[key].map((key) => `${key}=${obj[key]}`).join('&'))
-    .join('&');
+export const getQueryParamsAsObject = (search, acceptedValues) => {
+  var paramsFromURL = {};
+  var finalParams = buildFullEmptyObj(Object.keys(acceptedValues));
+
+  new URLSearchParams(search).forEach(
+    (value, key) =>
+      (paramsFromURL[key] = addElementToArray(paramsFromURL[key], value))
+  );
+
+  Object.keys(acceptedValues).forEach((key) => {
+    if (paramsFromURL[key] !== undefined) {
+      let temp = acceptedValues[key].filter((x) =>
+        paramsFromURL[key].map((y) => y.toLowerCase()).includes(x.toLowerCase())
+      );
+      finalParams[key] = temp;
+    }
+  });
+  console.log(finalParams);
+  return finalParams;
+};
+
+export const objectToQueryParams = (obj) => {
+  console.log('sono dentro il quertop');
+  console.log(obj);
+  let temp =
+    '?' +
+    Object.keys(obj)
+      .filter((key) => obj[key].length > 0)
+      .map((key) => obj[key].map((value) => `${key}=${value}`).join('&'))
+      .join('&');
+
+  console.log('strings');
+  console.log(temp);
+  return temp;
+};

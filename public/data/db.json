@@ -56,6 +56,6 @@
     }
   ],
   "recommendedEvents": [1, 2, 3],
-  "locations": ["rome", "milan", "tallin", "madrid"],
-  "tags": ["cats", "dogs", "owls", "pigs"]
+  "location": ["rome", "milan", "tallin", "madrid"],
+  "tag": ["cats", "dogs", "owls", "pigs"]
 }

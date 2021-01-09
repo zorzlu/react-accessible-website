@@ -4,8 +4,8 @@ import { Link, Heading } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { LiveMessage } from 'react-aria-live';
 import { Card } from '../components';
-/* import { Luca } from '.';
- */
+import { Luca } from '.';
+
 /* function getParameters() {
   let parameters = window.location.search.replace('?', '');
 
@@ -55,7 +55,7 @@ class Events extends Component {
   render() {
     return (
       <div name="mainContent">
-        {/* <Luca db={this.props.db}></Luca> */}
+        <Luca db={this.props.db}></Luca>
         <LiveMessage
           message="Navigated to Events page"
           aria-live="polite"

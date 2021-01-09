@@ -10,7 +10,7 @@ export const useDecodedLocation = (accepted) => {
     [search, accepted]
   );
 
-  return { search: decodedSearch, ...rest };
+  return { searchResultObj: decodedSearch, ...rest };
 };
 
 export const useDecodedRouteMatch = () => {
@@ -32,8 +32,11 @@ export const decodeValues = (obj) =>
 
 export const encodeValues = (fromSearch, newValue) => {
   let temp = fromSearch;
-
   Object.keys(newValue).forEach((key) => {
     temp[key] = newValue[key];
   });
+  console.log('valore encodevalues');
+  console.log(temp);
+
+  return temp;
 };

@@ -46,6 +46,7 @@ const Form = () => {
   }
 
   function onSubmit(values) {
+    console.log(values);
     return new Promise((resolve) => {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2));
