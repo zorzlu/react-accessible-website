@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
-import { Link, Box, Text, Stack, IconButton } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
+import { Button, Box, Stack, IconButton } from '@chakra-ui/react';
 import { FiX, FiMenu } from 'react-icons/fi';
 
 const Navigation = () => {
@@ -10,7 +10,7 @@ const Navigation = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav>
+    <nav aria-label="Main Pages">
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
     </nav>
@@ -30,11 +30,9 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, to = '/', ...rest }) => {
   return (
-    <Link as={RouterLink} to={to}>
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
+    <Button as={NavLink} to={to} {...rest}>
+      {children}
+    </Button>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrap, WrapItem } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
 import { Card } from '.';
 import { LiveMessage } from 'react-aria-live';
 
@@ -50,9 +50,7 @@ function CardsSection({ events, queryParams, startHeading }) {
       'Filters applied ' + nameParams + '. ' + numEvents + ' events found.';
   }
   const cards = evList.map((ev) => (
-    <WrapItem key={ev.id}>
-      <Card eventDetails={ev} startingHeading={startHeading} />
-    </WrapItem>
+    <Card key={ev.id} eventDetails={ev} startingHeading={startHeading} />
   ));
   return (
     <>
@@ -61,7 +59,9 @@ function CardsSection({ events, queryParams, startHeading }) {
         aria-live="polite"
         clearOnUnmount="true"
       />
-      <Wrap>{cards}</Wrap>
+      <SimpleGrid justifyItems="centre" minChildWidth="15rem" spacing="40px">
+        {cards}
+      </SimpleGrid>
     </>
   );
 }

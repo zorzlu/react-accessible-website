@@ -40,8 +40,8 @@ function Card({ eventDetails, startingHeading }) {
       as="article"
       className="card"
       margin="0.75em"
-      maxW={[96, 60]}
-      h={[null, 80]}
+      maxW={[null, '24rem', '20rem']}
+      h={[null, '20rem']}
       borderRadius="lg"
       boxShadow="none"
       bg="white"
@@ -55,6 +55,8 @@ function Card({ eventDetails, startingHeading }) {
         borderRadius="lg"
         overflow="hidden"
         boxShadow="md"
+        borderColor="gray.200"
+        borderWidth={1}
       >
         <Heading
           order="0"
@@ -82,10 +84,13 @@ function Card({ eventDetails, startingHeading }) {
           src={eventDetails.pictures[0]}
           alt={eventDetails.altPictures[0]}
         />
-        <Text order="1" pl="3" pr="3" fontWeight="semibold" fontSize="lg">
+        <Text pl="3" pr="3" fontWeight="semibold" fontSize="lg">
           {dateFromString(eventDetails.dateTime)}
         </Text>
-        <Box order="2" p="3">
+        <Text pl="3" pr="3" fontWeight="semibold" fontSize="lg">
+          {eventDetails.location}
+        </Text>
+        <Box p="3">
           <Heading
             as={computeHeading(startingHeading, 1)}
             fontSize="md"
