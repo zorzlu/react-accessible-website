@@ -36,7 +36,7 @@ class About extends Component {
           textAlign={['center', 'center', 'left', 'left']}
           fontSize="lg"
         >
-          {'Description about us'}
+          {'We make sure that our platform can be used by everyone.'}
         </Text>
         <Heading
           as="h2"
@@ -52,7 +52,9 @@ class About extends Component {
           textAlign={['center', 'center', 'left', 'left']}
           fontSize="lg"
         >
-          {'Some more infor about our path.'}
+          {
+            'Launched at the end of 2020, we first set out to create a bridge between people that want to have a greater impact into society and associations that offer interesting opportunities.'
+          }
         </Text>
         <Heading
           as="h2"
