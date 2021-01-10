@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useLocation, useRouteMatch } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { getQueryParamsAsObject } from './helpersURL';
 
 export const useDecodedLocation = (accepted) => {
@@ -12,23 +12,6 @@ export const useDecodedLocation = (accepted) => {
 
   return { searchResultObj: decodedSearch, ...rest };
 };
-
-export const useDecodedRouteMatch = () => {
-  const { params, ...rest } = useRouteMatch();
-
-  const decodedParams = useMemo(() => decodeValues(params), [params]);
-
-  return { params: decodedParams, ...rest };
-};
-
-export const decodeValues = (obj) =>
-  Object.keys(obj).reduce(
-    (acc, key) => ({
-      ...acc,
-      [key]: obj[key] && decodeURIComponent(obj[key]),
-    }),
-    {}
-  );
 
 export const encodeValues = (fromSearch, newValue) => {
   let temp = fromSearch;

@@ -1,28 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link, Heading } from '@chakra-ui/react';
+import { Link, Heading, Box } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { LiveMessage } from 'react-aria-live';
-import { Card } from '../components';
 import { Luca } from '.';
 
-/* function getParameters() {
-  let parameters = window.location.search.replace('?', '');
-
-  let currentParameters = {};
-
-  if (Object.keys(parameters).length) {
-    parameters = parameters.split('&');
-
-    for (let i = 0; i < parameters.length; i++) {
-      let parameter = parameters[i].split('=');
-      currentParameters[parameter[0]] = parameter[1];
-    }
-  }
-
-  return currentParameters;
-}
- */
 function EventsList({ evList }) {
   const group = evList;
   const list = group.map((element) => (
@@ -55,7 +37,6 @@ class Events extends Component {
   render() {
     return (
       <div name="mainContent">
-        <Luca db={this.props.db}></Luca>
         <LiveMessage
           message="Navigated to Events page"
           aria-live="polite"
@@ -66,8 +47,9 @@ class Events extends Component {
           Events
         </Heading>
         <div className="Events">This is the Events page.</div>
-        <EventsList evList={this.props.db.events} />
-        <Card eventDetails={this.props.db.events[0]} startingHeading="2" />
+        <Box mt="3rem">
+          <Luca db={this.props.db}></Luca>
+        </Box>
       </div>
     );
   }

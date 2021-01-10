@@ -94,7 +94,7 @@ function Card({ eventDetails, startingHeading }) {
           >
             Tags
           </Heading>
-          <ListTagsInCard tags={eventDetails.tags} />
+          <ListTagsInCard tags={eventDetails.tag} />
         </Box>
       </Flex>
     </Box>

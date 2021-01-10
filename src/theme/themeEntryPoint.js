@@ -8,6 +8,7 @@ import shadows from './foundations/shadows';
 
 // Component style overrides
 import Container from './components/container';
+import Accordion from './components/accordion';
 
 const overrides = {
   styles,
@@ -16,6 +17,7 @@ const overrides = {
   // Other foundational style overrides go here
   components: {
     Container,
+    Accordion,
     // Other components go here
   },
 };

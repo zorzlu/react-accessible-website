@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "event 0",
-      "tags": ["dogs", "cats"],
+      "tag": ["dogs", "cats"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Madrid",
       "full": false,
@@ -21,7 +21,7 @@
     {
       "id": 1,
       "name": "event 1",
-      "tags": ["dogs", "pigs"],
+      "tag": ["dogs", "pigs"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Milan",
       "full": false,
@@ -39,7 +39,7 @@
     {
       "id": 2,
       "name": "event 2",
-      "tags": ["owls", "cats"],
+      "tag": ["owls", "cats"],
       "dateTime": "2021-01-04T23:00:00.266Z",
       "location": "Rome",
       "full": false,
@@ -53,9 +53,27 @@
       "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
       "pictures": ["logo512.png", "logo192.png"],
       "altPictures": ["your summer image 1", "your summer image 2"]
+    },
+    {
+      "id": 3,
+      "name": "dinner with Loic",
+      "tag": ["owls", "a11y"],
+      "dateTime": "2021-01-04T23:00:00.266Z",
+      "location": "Madrid",
+      "full": false,
+      "association": "EIT Digital",
+      "phone": "33333333333",
+      "headerText": "I wanna dance with somebody",
+      "longDescription": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet est at turpis imperdiet elementum. Nulla accumsan fermentum ex, ut gravida dui blandit id. Etiam sollicitudin sodales nisi id eleifend. Ut gravida, odio varius vestibulum luctus, lacus sem euismod elit, at sagittis dolor turpis eu magna. Duis ut tortor aliquam, cursus tortor vel, porttitor neque. Cras ut dui tincidunt, rhoncus mi et, viverra tortor. Nam elit purus, gravida nec purus at, suscipit mollis arcu. Nam ornare nisl quis felis consectetur ultrices. Nulla aliquet metus quis lectus volutpat dignissim. Quisque ut diam ac ligula interdum suscipit. Vestibulum dignissim velit sit amet libero facilisis, id varius magna elementum. In rhoncus dictum nisl id condimentum. Proin eget est maximus, suscipit leo vitae, mattis nisi. Duis commodo ex vitae viverra porttitor.",
+        "Proin ac enim lobortis, commodo urna et, eleifend urna. Donec bibendum nisl ac ligula aliquam, ut gravida risus pulvinar. Fusce sit amet diam odio. Aliquam erat volutpat. Curabitur varius sagittis urna et efficitur. Donec sit amet nibh eu diam sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc iaculis lacus eu quam iaculis cursus. Sed posuere quis diam in accumsan. Maecenas blandit vehicula facilisis. Cras sit amet bibendum nulla. Nullam purus mauris, interdum eu justo nec, fermentum volutpat ipsum."
+      ],
+      "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
+      "pictures": ["logo512.png", "logo192.png"],
+      "altPictures": ["your summer image 1", "your summer image 2"]
     }
   ],
   "recommendedEvents": [1, 2, 3],
   "location": ["rome", "milan", "tallin", "madrid"],
-  "tag": ["cats", "dogs", "owls", "pigs"]
+  "tag": ["cats", "dogs", "owls", "a11y", "pigs"]
 }
