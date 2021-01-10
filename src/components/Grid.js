@@ -12,7 +12,7 @@ import {
 const Grid = () => {
   return (
     <Table variant="simple" role="table" aria-label="Replace">
-      <TableCaption>Imperial to metric conversion factors</TableCaption>
+      <TableCaption>Caption</TableCaption>
       <Thead role="rowgroup">
         <Tr role="row">
           <Th role="columnheader">Columnheader1</Th>

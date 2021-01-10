@@ -10,12 +10,10 @@ export default function Hero({ title, description, image }) {
       justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
       direction={{ base: 'column-reverse', md: 'row' }}
       wrap="no-wrap"
-      minH="70vh"
-      px={8}
-      mb={16}
+      minH="auto"
     >
       <Stack
-        spacing={4}
+        spacing={10}
         w={{ base: '80%', md: '40%' }}
         align={['center', 'center', 'flex-start', 'flex-start']}
       >
@@ -29,9 +27,8 @@ export default function Hero({ title, description, image }) {
           {title}
         </Heading>
         <Text
-          size="md"
+          fontSize="xl"
           color="primary.800"
-          opacity="0.8"
           fontWeight="normal"
           lineHeight={1.5}
           textAlign={['center', 'center', 'left', 'left']}
@@ -60,6 +57,7 @@ Hero.propTypes = {
 
 Hero.defaultProps = {
   title: 'Find volunteering opportunities nearby',
-  description: 'This is the subheader section where we describe how it works',
+  description:
+    'Through our platform you can discover voluunteering events from all kind of fields and connect with nonprofit associations to achieve impactful outcomes.',
   image: 'hero.jpg',
 };

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Box, Flex } from '@chakra-ui/react';
+import { Flex, Heading, Text, ListItem, OrderedList } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 import { LiveMessage } from 'react-aria-live';
 import { Hero } from '../components';
+import { Grid } from '../components';
 
 class Home extends Component {
   constructor(props) {
@@ -21,16 +22,77 @@ class Home extends Component {
           aria-live="polite"
           clearOnUnmount="true"
         />
-        <Box textAlign="center" fontSize="xl">
-          <Flex
-            direction="column"
-            align="center"
-            // maxW={{ xl: '6000px' }}
-            // m="0 auto"
+        <Hero />
+        <Flex direction="column" maxW={{ xl: '1200px' }} m="0 auto">
+          <Heading
+            as="h2"
+            textStyle="h1"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
           >
-            <Hero />
-          </Flex>
-        </Box>
+            {'Our mission'}
+          </Heading>
+          <Text
+            textStyle="paragraph"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+            fontSize="lg"
+          >
+            {'Our mission'}
+          </Text>
+          <Heading
+            as="h2"
+            textStyle="h1"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {'How to apply to an event'}
+          </Heading>
+          <Text
+            textStyle="paragraph"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+            fontSize="lg"
+          >
+            {
+              'The application process is simple and quick. You just need to follow four steps:'
+            }
+          </Text>
+          <Text
+            textStyle="paragraph"
+            lineHeight={2.5}
+            textAlign={['center', 'center', 'left', 'left']}
+            fontSize="lg"
+          >
+            <OrderedList>
+              <ListItem>Browse our wide selection of events.</ListItem>
+              <ListItem>
+                Filter events by topic and location to find your best match.
+              </ListItem>
+              <ListItem>
+                Apply to your chosen event and fill in the form.
+              </ListItem>
+              <ListItem>Now you only have to attend and enjoy!</ListItem>
+            </OrderedList>
+          </Text>
+          <Heading
+            as="h2"
+            textStyle="h1"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {'Recommended events'}
+          </Heading>
+          <Heading
+            as="h2"
+            textStyle="h1"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {'Our benefits'}
+          </Heading>
+          <Grid />
+        </Flex>
       </>
     );
   }
