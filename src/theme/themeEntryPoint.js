@@ -5,6 +5,7 @@ import textStyles from './textstyles';
 
 // Foundational style overrides
 import shadows from './foundations/shadows';
+import colors from './foundations/colors';
 
 // Component style overrides
 import Container from './components/container';
@@ -12,6 +13,7 @@ import Accordion from './components/accordion';
 
 const overrides = {
   styles,
+  colors,
   shadows,
   textStyles,
   // Other foundational style overrides go here
