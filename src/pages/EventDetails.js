@@ -2,18 +2,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Box,
   Button,
-  Flex,
-  Text,
+  Box,
   Image,
   Stack,
+  Flex,
+  Text,
   Heading,
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import { Link as RouterLink } from 'react-router-dom';
+//import EventOverview from '../components/EventOverview';
 
 const dateFromString = function (dateString) {
   return new Intl.DateTimeFormat('en-GB', {
@@ -42,12 +43,17 @@ class EventDetails extends Component {
           aria-live="polite"
           clearOnUnmount="true"
         />
+
         <Flex
           align="center"
-          justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
+          justify={{
+            base: 'center',
+            md: 'space-around',
+            xl: 'space-between',
+          }}
           direction={{ base: 'column-reverse', md: 'row' }}
           wrap="no-wrap"
-          //minH="30vh"
+          minH="auto"
           //px={8}
           //mb={16}
         >
@@ -117,49 +123,52 @@ class EventDetails extends Component {
             />
           </Box>
         </Flex>
-        <Heading
-          textStyle="h2"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Description of the event'}
-        </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {this.props.details.longDescription}
-        </Text>
-        <Heading
-          textStyle="h2"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Activities'}
-        </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          <UnorderedList>
-            {this.props.details.activities.map((listitem) => (
-              <ListItem>{listitem}</ListItem>
-            ))}
-          </UnorderedList>
-        </Text>
-        <br></br>
-        <br></br>
-
-        <Button
-          as={RouterLink}
-          to={'/event/' + this.props.details['id'] + '/register'}
-          variant="outline"
-          colorScheme="black"
-        >
-          Apply now
-        </Button>
+        <Flex direction="column" maxW={{ xl: '1200px' }} m="0 auto">
+          <Heading
+            as="h2"
+            textStyle="h2"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {'Description of the event'}
+          </Heading>
+          <Text
+            textStyle="paragraph"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {this.props.details.longDescription}
+          </Text>
+          <Heading
+            as="h2"
+            textStyle="h2"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            {'Activities'}
+          </Heading>
+          <Text
+            textStyle="paragraph"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+          >
+            <UnorderedList>
+              {this.props.details.activities.map((listitem) => (
+                <ListItem>{listitem}</ListItem>
+              ))}
+            </UnorderedList>
+          </Text>
+          <br></br>
+          <br></br>
+          <Button
+            as={RouterLink}
+            to={'/event/' + this.props.details['id'] + '/register'}
+            variant="outline"
+            colorScheme="black"
+          >
+            Apply now
+          </Button>
+        </Flex>
       </React.Fragment>
     );
   }
