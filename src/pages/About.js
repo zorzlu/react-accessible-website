@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Heading, UnorderedList, ListItem, Text } from '@chakra-ui/react';
+import {
+  Heading,
+  UnorderedList,
+  ListItem,
+  Text,
+  Stack,
+  Image,
+} from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import { Grid } from '../components';
 
@@ -32,7 +39,9 @@ class About extends Component {
           textAlign={['center', 'center', 'left', 'left']}
           fontSize="lg"
         >
-          {'We make sure that our platform can be used by everyone.'}
+          {
+            'We are a dedicated team driven by the goal to provide a unique experience to every partner that chooses to join us.'
+          }
         </Text>
         <Heading
           as="h2"
@@ -42,36 +51,48 @@ class About extends Component {
         >
           {'History'}
         </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-          fontSize="lg"
-        >
-          {
-            'Launched at the end of 2020, we first set out to create a bridge between people that want to have a greater impact into society and associations that offer interesting opportunities.'
-          }
-        </Text>
+        <Stack direction={'row'} spacing={5}>
+          <Image
+            alt="2 people holding hands"
+            src={'helpinghand.jpg'}
+            //size="40%"
+            boxSize="200px"
+            width="50"
+            objectFit="cover"
+            rounded="1rem"
+            shadow="2xl"
+          />
+          <Text
+            textStyle="paragraph"
+            lineHeight={2}
+            textAlign={['center', 'center', 'left', 'left']}
+            fontSize="lg"
+          >
+            {
+              'Launched at the end of 2020, we first set out to create a bridge between people that want to have a greater impact into society and associations that offer interesting opportunities. Every partner and volunteer who joined us since then, encouraged us to believe and work harder on our mission. Today we are using all of our resources to create an activated community and help people find their own way to see the world.'
+            }
+          </Text>
+        </Stack>
         <Heading
           as="h2"
           textStyle="h1"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Our values'}
+          {'Our goals'}
         </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2.5}
-          textAlign={['center', 'center', 'left', 'left']}
-          fontSize="lg"
-        >
-          <UnorderedList>
-            <ListItem>Integrity</ListItem>
-            <ListItem>Flexibility</ListItem>
-            <ListItem>Respect</ListItem>
-          </UnorderedList>
-        </Text>
+        <UnorderedList>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Connect people with volunteering associations and increase social
+            awareness.
+          </ListItem>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Increase community engagement.
+          </ListItem>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Inspire people to be open-minded and to learn.
+          </ListItem>
+        </UnorderedList>
         <Heading
           as="h2"
           textStyle="h1"
@@ -87,8 +108,16 @@ class About extends Component {
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Meet the team'}
+          {'Contact information'}
         </Heading>
+        <Text
+          textStyle="paragraph"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+          fontSize="lg"
+        >
+          {'You can contact us at:'}
+        </Text>
       </>
     );
   }
