@@ -56,7 +56,10 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form aria-labelledby="formHiddenId" onSubmit={handleSubmit(onSubmit)}>
+      <div hidden id="formHiddenId">
+        Registration Form
+      </div>
       <Stack spacing={2}>
         <FormControl isInvalid={errors.firstname}>
           <FormLabel htmlFor="name">First name</FormLabel>
