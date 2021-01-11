@@ -84,7 +84,7 @@ const EventOverview = ({ eventdetails }) => {
         <Image
           boxSize="300px"
           objectFit="cover"
-          src={process.env.PUBLIC_URL + '/' + eventdetails.pictures[0]}
+          src={process.env.PUBLIC_URL + eventdetails.pictures[0]}
           alt={eventdetails.altPictures[0]}
           rounded="1rem"
           shadow="2xl"
