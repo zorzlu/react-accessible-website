@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-  Box,
   Button,
-  Flex,
   Text,
   Image,
-  Stack,
   Heading,
+  Box,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -21,76 +20,57 @@ const dateFromString = function (dateString) {
 
 const EventOverview = ({ eventdetails }) => {
   return (
-    <Flex
-      align="center"
-      justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
-      direction={{ base: 'column-reverse', md: 'row' }}
-      wrap="no-wrap"
-      minH="auto"
-      //px={8}
-      //mb={16}
-    >
-      <Stack
-        spacing={2}
-        w={{ base: '80%', md: '40%' }}
-        align={['center', 'center', 'flex-start', 'flex-start']}
-      >
-        <Heading
-          as="h1"
-          size="xl"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {eventdetails['name']}
-        </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Date: ' + dateFromString(eventdetails.dateTime)}
-        </Text>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Location: ' + eventdetails.location}
-        </Text>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Telephone number: ' + eventdetails.phone}
-        </Text>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Association: ' + eventdetails.association}
-        </Text>
-        <Button
-          as={RouterLink}
-          to={'/event/' + eventdetails['id'] + '/register'}
-          variant="outline"
-          colorScheme="brand"
-        >
-          Apply now
-        </Button>
-      </Stack>
-      <Box w={{ base: '80%', sm: '60%', md: '50%' }} mb={{ base: 12, md: 0 }}>
+    <>
+      <header>
         <Image
-          boxSize="300px"
+          my="2em"
+          w="100%"
+          h="30vh"
+          maxH="20em"
           objectFit="cover"
           src={process.env.PUBLIC_URL + '/' + eventdetails.pictures[0]}
           alt={eventdetails.altPictures[0]}
           rounded="1rem"
-          shadow="2xl"
+          shadow="xl"
         />
-      </Box>
-    </Flex>
+        <Heading as="h1" size="xl" mb="1em">
+          {eventdetails['name']}
+        </Heading>
+      </header>
+      <section>
+        <Heading as="h2" size="md" fontWeight="bold" mt="2em" mb="1em">
+          Event Overview
+        </Heading>
+        <SimpleGrid columns={[1, 1, 3]} spacing={[0, 0, '2em']} align="centre">
+          <Box>
+            <Text textStyle="p" lineHeight={2}>
+              {'Date: ' + dateFromString(eventdetails.dateTime)}
+            </Text>
+            <Text textStyle="p" lineHeight={2}>
+              {'Location: ' + eventdetails.location}
+            </Text>
+          </Box>
+          <Box>
+            <Text textStyle="p" lineHeight={2}>
+              {'Association: ' + eventdetails.association}
+            </Text>
+            <Text textStyle="p" lineHeight={2}>
+              {'Telephone number: ' + eventdetails.phone}
+            </Text>
+          </Box>
+          <Box mt="1em">
+            <Button
+              as={RouterLink}
+              to={'/event/' + eventdetails['id'] + '/register'}
+              variant="outline"
+              colorScheme="brand"
+            >
+              Apply now
+            </Button>
+          </Box>
+        </SimpleGrid>
+      </section>
+    </>
   );
 };
 

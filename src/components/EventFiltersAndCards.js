@@ -75,53 +75,54 @@ function EventFiltersAndCards({ db }) {
 
   return (
     <>
-      <Heading as="h2" fontSize="lg" fontWeight="semibold" pb="2">
-        Filter Selection
-      </Heading>
-      <Accordion allowToggle variant="menuFilter">
-        <AccordionItem>
-          <Flex direction={['column', 'row']}>
-            <Button as={AccordionButton} colorScheme="brand">
-              <Box flex="1" textAlign="left">
-                Edit Filters
-              </Box>
-              <AccordionIcon />
-            </Button>
-            <Text px="1rem" py="0.5rem">
-              {filterTextOnBar(query)}
-            </Text>
-          </Flex>
-          <AccordionPanel py="2em">
-            <SimpleGrid
-              mb="1em"
-              as="ul"
-              listStyleType="none"
-              justifyItems="centre"
-              columns={[1, 2, 3, 4]}
-              spacing="2rem"
-            >
-              {filters}
-            </SimpleGrid>
-            <Button
-              mb="1em"
-              colorScheme="brand"
-              variant="outline"
-              onClick={() => updateQueryParams(emptyString)}
-            >
-              Remove all filters
-            </Button>
-            <Divider />
-          </AccordionPanel>
-        </AccordionItem>
-      </Accordion>
-
-      <Box pt="3rem">
-        <Heading as="h2" fontSize="lg" fontWeight="semibold" pb="2">
+      <section>
+        <Heading as="h2" size="md" fontWeight="bold" mt="2em" mb="1em">
+          Filter Selection
+        </Heading>
+        <Accordion allowToggle variant="menuFilter">
+          <AccordionItem>
+            <Flex direction={['column', 'row']}>
+              <Button as={AccordionButton} colorScheme="brand">
+                <Box flex="1" textAlign="left">
+                  Edit Filters
+                </Box>
+                <AccordionIcon />
+              </Button>
+              <Text px="1rem" py="0.5rem">
+                {filterTextOnBar(query)}
+              </Text>
+            </Flex>
+            <AccordionPanel py="2em">
+              <SimpleGrid
+                mb="1em"
+                as="ul"
+                listStyleType="none"
+                justifyItems="centre"
+                columns={[1, 2, 3, 4]}
+                spacing="2rem"
+              >
+                {filters}
+              </SimpleGrid>
+              <Button
+                mb="1em"
+                colorScheme="brand"
+                variant="outline"
+                onClick={() => updateQueryParams(emptyString)}
+              >
+                Remove all filters
+              </Button>
+              <Divider />
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
+      </section>
+      <section>
+        <Heading as="h2" size="md" fontWeight="bold" mt="2em" mb="1em">
           List of Events
         </Heading>
 
         <CardsSection events={db.events} queryParams={query} startHeading="3" />
-      </Box>
+      </section>
     </>
   );
 }

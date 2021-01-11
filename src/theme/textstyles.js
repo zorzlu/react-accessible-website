@@ -26,7 +26,7 @@ const textStyles = {
     mb: '.25rem',
     lineHeight: 1.2,
     fontWeight: 'bold',
-    fontSize: '1.875rem',
+    fontSize: 'xl',
     letterSpacing: '-.025em',
   },
   h2: {

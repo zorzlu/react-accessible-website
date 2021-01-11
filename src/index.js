@@ -7,7 +7,6 @@ import * as serviceWorker from './serviceWorker';
 fetch('/data/db.json')
   .then((r) => r.json())
   .then((data) => {
-    console.log('Events List' + data.events);
     ReactDOM.render(
       <StrictMode>
         <App db={data} />

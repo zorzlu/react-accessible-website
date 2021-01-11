@@ -55,6 +55,7 @@ Hero.propTypes = {
   image: PropTypes.string,
 };
 
+//TODO WHAT THE HELL IS THIS
 Hero.defaultProps = {
   title: 'Find volunteering opportunities nearby',
   description:

@@ -22,7 +22,7 @@ class App extends React.Component {
     this.contentContainer = React.createRef();
     this.setNewPage = this.setNewPage.bind(this);
     this.state = {
-      websiteName: 'AppName',
+      websiteName: 'CommunityMate',
     };
   }
 
@@ -47,10 +47,10 @@ class App extends React.Component {
               <div id="accessibilityLinks">
                 <div ref={this.contentContainer} tabIndex="-1" />
                 <SkipNavLink id="navigation" zIndex="1000">
-                  Go to navigation
+                  Skip to Navigation
                 </SkipNavLink>
                 <SkipNavLink id="main" zIndex="1000">
-                  Go to Main
+                  Skip to Main Content
                 </SkipNavLink>
               </div>
               <Header as="header">
@@ -59,8 +59,8 @@ class App extends React.Component {
                 </SkipNavContent>
               </Header>
 
-              <Container as="main" size="pageContainer">
-                <SkipNavContent id="main">
+              <SkipNavContent id="main" as="main">
+                <Container size="pageContainer">
                   <Switch>
                     <Route
                       path="/"
@@ -113,8 +113,8 @@ class App extends React.Component {
                       )}
                     />
                   </Switch>
-                </SkipNavContent>
-              </Container>
+                </Container>
+              </SkipNavContent>
               <Container as="footer" size="footer">
                 <Footer />
               </Container>

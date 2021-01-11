@@ -73,9 +73,12 @@ function CardsSection({ events, queryParams, startHeading }) {
   ));
   return (
     <>
-      <Text aria-live="polite">{a11yMessage}</Text>
+      <Text textStyle="p" aria-live="polite">
+        {a11yMessage}
+      </Text>
 
       <SimpleGrid
+        mt="1rem"
         as="ul"
         listStyleType="none"
         justifyItems="centre"

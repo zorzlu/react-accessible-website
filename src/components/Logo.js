@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image, Link } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
-
+import logoApp from './logo.svg';
 const Logo = (props) => {
   return (
     <Box
@@ -15,7 +15,7 @@ const Logo = (props) => {
       <Link _focus={{ boxShadow: null }} as={NavLink} to="/">
         <Image
           boxSize="2.5em"
-          src={process.env.PUBLIC_URL + 'logo.svg'}
+          src={logoApp}
           alt="Application Logo, back to Homepage."
         />
       </Link>

@@ -39,54 +39,42 @@ class EventDetails extends Component {
           name={this.props.details.name}
           isFormPage={false}
         />
-        <EventOverview eventdetails={this.props.details} />
+        <article>
+          <EventOverview eventdetails={this.props.details} />
+          <section>
+            <Heading as="h2" size="md" fontWeight="bold" mt="3em" mb="1em">
+              Description of the event
+            </Heading>
+            <Text maxW="48em" textStyle="p">
+              {this.props.details.longDescription}
+            </Text>
+          </section>
+          <section>
+            <Heading as="h2" size="md" fontWeight="bold" mt="3em" mb="1em">
+              Activities
+            </Heading>
+            <UnorderedList pb="3em">
+              {this.props.details.activities.map((listitem) => (
+                <ListItem
+                  lineHeight={2.5}
+                  fontSize="lg"
+                  key={strConv(listitem) + '-activity'}
+                >
+                  {listitem}
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </section>
 
-        <Heading
-          as="h2"
-          textStyle="h2"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Description of the event'}
-        </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {this.props.details.longDescription}
-        </Text>
-        <Heading
-          as="h2"
-          textStyle="h2"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'Activities'}
-        </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          <UnorderedList>
-            {this.props.details.activities.map((listitem) => (
-              <ListItem key={strConv(listitem) + '-activity'}>
-                {listitem}
-              </ListItem>
-            ))}
-          </UnorderedList>
-        </Text>
-        <br></br>
-        <br></br>
-        <Button
-          as={RouterLink}
-          to={'/event/' + this.props.details['id'] + '/register'}
-          variant="outline"
-          colorScheme="brand"
-        >
-          Apply now
-        </Button>
+          <Button
+            as={RouterLink}
+            to={'/event/' + this.props.details['id'] + '/register'}
+            variant="outline"
+            colorScheme="brand"
+          >
+            Apply now
+          </Button>
+        </article>
       </React.Fragment>
     );
   }
