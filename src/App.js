@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, ChakraProvider, Container } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import { SkipNavLink, SkipNavContent } from '@chakra-ui/skip-nav';
 import PropTypes from 'prop-types';
 import {
@@ -11,7 +11,7 @@ import {
   PageNotFound,
 } from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Footer, Logo, Navigation, Header } from './components';
+import { Footer, Header, Navigation } from './components';
 import { OurTheme } from './theme';
 import { LiveAnnouncer } from 'react-aria-live';
 import EventChecker from './pages/EventChecker';
@@ -47,20 +47,18 @@ class App extends React.Component {
               <div id="accessibilityLinks">
                 <div ref={this.contentContainer} tabIndex="-1" />
                 <SkipNavLink id="navigation" zIndex="1000">
-                  Skip to navigation
+                  Go to navigation
                 </SkipNavLink>
                 <SkipNavLink id="main" zIndex="1000">
-                  Skip to Main
+                  Go to Main
                 </SkipNavLink>
               </div>
-              <Center as="header">
-                <Header>
-                  <Logo height="3em" />
-                  <SkipNavContent height="inherit" id="navigation">
-                    <Navigation />
-                  </SkipNavContent>
-                </Header>
-              </Center>
+              <Header as="header">
+                <SkipNavContent id="navigation">
+                  <Navigation />
+                </SkipNavContent>
+              </Header>
+
               <Container as="main" size="pageContainer">
                 <SkipNavContent id="main">
                   <Switch>

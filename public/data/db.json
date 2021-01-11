@@ -2,10 +2,10 @@
   "events": [
     {
       "id": 0,
-      "name": "event 0",
+      "name": "Bring food to homeless people",
       "tag": ["dogs", "cats"],
       "dateTime": "2021-01-04T23:00:00.266Z",
-      "location": "Madrid",
+      "location": "Bella Location",
       "full": false,
       "association": "Pinco",
       "phone": "33333333333",
@@ -74,6 +74,6 @@
     }
   ],
   "recommendedEvents": [1, 2, 3],
-  "location": ["rome", "milan", "tallin", "madrid"],
+  "location": ["bella location", "milan", "tallin", "madrid"],
   "tag": ["cats", "dogs", "owls", "a11y", "pigs"]
 }

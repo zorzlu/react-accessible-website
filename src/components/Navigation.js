@@ -1,38 +1,21 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import { Button, Box, Stack, IconButton } from '@chakra-ui/react';
+import { Flex, Box, IconButton, Spacer } from '@chakra-ui/react';
 import { FiX, FiMenu } from 'react-icons/fi';
-
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
-  return (
-    <nav aria-label="Main Pages">
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
-    </nav>
-  );
-};
+import LinkNavigation from './LinkNavigation';
 
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <IconButton
-      display={{ base: 'yes', md: 'none' }}
-      onClick={toggle}
-      icon={isOpen ? <FiX /> : <FiMenu />}
-      aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
-    />
-  );
-};
-
-const MenuItem = ({ children, to = '/', ...rest }) => {
-  return (
-    <Button as={NavLink} to={to} {...rest}>
-      {children}
-    </Button>
+    <>
+      <IconButton
+        display={{ base: 'yes', md: 'none' }}
+        onClick={toggle}
+        icon={isOpen ? <FiX /> : <FiMenu />}
+        aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
+        aria-expanded={isOpen}
+        aria-controls="main_nav_buttons"
+      />
+    </>
   );
 };
 
@@ -41,35 +24,68 @@ MenuToggle.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 };
 
-MenuItem.propTypes = {
-  children: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired,
-};
-
 const MenuLinks = ({ isOpen }) => {
+  /* <Collapse
+      in={{ base: isOpen ? 'true' : 'false', md: 'false' }}
+      animateOpacity */
   return (
     <Box
+      pt={[4, 4, 0, 0]}
+      w="100%"
       display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
-      flexBasis={{ base: '100%', md: 'auto' }}
     >
-      <Stack
-        spacing={8}
-        align="center"
-        justify={['center', 'space-between', 'flex-end', 'flex-end']}
+      <Flex
+        as="ul"
+        listStyleType="none"
+        id="main_nav_buttons"
+        justify={['space-between', 'space-between', 'flex-end', 'flex-end']}
         direction={['column', 'row', 'row', 'row']}
-        pt={[4, 4, 0, 0]}
+        borderBottomWidth={['1px', '1px', '0px']}
+        borderLeftWidth={['1px', '1px', '0px']}
+        borderRightWidth={['1px', '1px', '0px']}
+        borderBottomRadius="xl"
       >
-        <MenuItem to="/">Home</MenuItem>
-
-        <MenuItem to="/events">Events </MenuItem>
-        <MenuItem to="/about">About us</MenuItem>
-      </Stack>
+        <Box mx={4} mb={[4, null]} as="li">
+          <LinkNavigation to="/">Home</LinkNavigation>
+        </Box>
+        <Box mx={4} mb={[4, null]} as="li">
+          <LinkNavigation to="/events">Events</LinkNavigation>
+        </Box>
+        <Box mx={4} mb={[4, null]} as="li">
+          <LinkNavigation to="/about">About Us</LinkNavigation>
+        </Box>
+      </Flex>
     </Box>
   );
 };
 
 MenuLinks.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+};
+
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <Flex
+      as="nav"
+      height="inherit"
+      justify="space-between"
+      wrap="wrap"
+      maxW="75em"
+      w={[null, null, '20 rem']}
+      bg="transparent"
+      color="primary.700"
+      borderColor="black"
+      direction={['row', 'row', 'row', 'row']}
+    >
+      <Spacer />
+      <MenuToggle toggle={toggle} isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} />
+    </Flex>
+  );
 };
 
 export default Navigation;

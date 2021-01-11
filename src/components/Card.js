@@ -17,7 +17,7 @@ const dateFromString = function (dateString) {
 
 //MAIN CARD COMPONENT
 
-function Card({ eventDetails, startingHeading }) {
+function Card({ eventDetails, startingHeading, ...rest }) {
   let history = useHistory();
 
   function handleClickOnCard() {
@@ -37,18 +37,19 @@ function Card({ eventDetails, startingHeading }) {
       _focusWithin={{ boxShadow: 'outline' }}
       _hover={{ boxShadow: 'outline', cursor: 'pointer' }}
       onClick={() => handleClickOnCard()}
-      as="article"
-      className="card"
       margin="0.75em"
-      maxW={[null, '24rem', '20rem']}
+      maxW={[null, '24rem', '20rem', '18rem']}
       h={[null, '20rem']}
       borderRadius="lg"
       boxShadow="none"
       bg="white"
+      {...rest}
     >
       <Flex
         _focusWithin={{ boxShadow: 'xl' }}
         _hover={{ boxShadow: 'xl' }}
+        as="article"
+        className="card"
         direction="column"
         maxW="inherit"
         h="inherit"

@@ -4,7 +4,7 @@ function addElementToArray(array, value) {
     let temp = array;
     temp.push(value);
     return temp;
-  }
+  } else return array;
 }
 function buildFullEmptyObj(keysToUse) {
   let temp = {};
@@ -28,9 +28,11 @@ export const getQueryParamsAsObject = (search, acceptedValues) => {
 
   new URLSearchParams(search).forEach(
     (value, key) =>
-      (paramsFromURL[key] = addElementToArray(paramsFromURL[key], value))
+      (paramsFromURL[key] = addElementToArray(
+        paramsFromURL[key],
+        decodeURIComponent(value)
+      ))
   );
-
   Object.keys(acceptedValues).forEach((key) => {
     if (paramsFromURL[key] !== undefined) {
       let temp = acceptedValues[key].filter((x) =>
@@ -50,7 +52,9 @@ export const objectToQueryParams = (obj) => {
     '?' +
     Object.keys(obj)
       .filter((key) => obj[key].length > 0)
-      .map((key) => obj[key].map((value) => `${key}=${value}`).join('&'))
+      .map((key) =>
+        obj[key].map((value) => `${key}=${encodeURIComponent(value)}`).join('&')
+      )
       .join('&');
 
   console.log('strings');

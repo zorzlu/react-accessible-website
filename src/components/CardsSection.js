@@ -50,7 +50,12 @@ function CardsSection({ events, queryParams, startHeading }) {
       'Filters applied ' + nameParams + '. ' + numEvents + ' events found.';
   }
   const cards = evList.map((ev) => (
-    <Card key={ev.id} eventDetails={ev} startingHeading={startHeading} />
+    <Card
+      as="li"
+      key={ev.id}
+      eventDetails={ev}
+      startingHeading={startHeading}
+    />
   ));
   return (
     <>
@@ -59,7 +64,13 @@ function CardsSection({ events, queryParams, startHeading }) {
         aria-live="polite"
         clearOnUnmount="true"
       />
-      <SimpleGrid justifyItems="centre" minChildWidth="15rem" spacing="40px">
+      <SimpleGrid
+        as="ul"
+        listStyleType="none"
+        justifyItems="centre"
+        minChildWidth="15rem"
+        spacing="2rem"
+      >
         {cards}
       </SimpleGrid>
     </>

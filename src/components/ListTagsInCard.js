@@ -11,7 +11,7 @@ function ListTagsInCard({ tags }) {
   const lista = tags.map((tag) => (
     <WrapItem key={strConv(tag)}>
       <Tag
-        colorScheme="teal"
+        colorScheme="gray"
         fontWeight="bold"
         letterSpacing="wide"
         fontSize="xs"
