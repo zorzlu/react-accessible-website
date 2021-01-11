@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import { Link as RouterLink } from 'react-router-dom';
-import { EventOverview, BreadCrumbAuto } from '../components';
+import { EventOverview } from '../components';
 
 function strConv(textConvertToString) {
   return textConvertToString.toString().toLowerCase().replace(' ', '-');
@@ -34,11 +34,11 @@ class EventDetails extends Component {
           }
           aria-live="polite"
         />
-        <BreadCrumbAuto
+        {/* <BreadCrumbAuto
           id={this.props.details.id}
           name={this.props.details.name}
           isFormPage={false}
-        />
+        /> */}
         <article>
           <EventOverview eventdetails={this.props.details} />
           <section>

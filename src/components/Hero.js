@@ -1,64 +1,60 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { Box, Flex, Image, Heading, Stack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Image,
+  Heading,
+  Stack,
+  Text,
+  Center,
+} from '@chakra-ui/react';
 
-export default function Hero({ title, description, image }) {
+export default function Hero() {
   return (
-    <Flex
-      align="center"
-      justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
-      direction={{ base: 'column-reverse', md: 'row' }}
-      wrap="no-wrap"
-      minH="auto"
-    >
-      <Stack
-        spacing={10}
-        w={{ base: '80%', md: '40%' }}
-        align={['center', 'center', 'flex-start', 'flex-start']}
-      >
+    <>
+      <Center minH={['5em', '5em', '50vh']} px={['10vw', '20vw', '15em']}>
         <Heading
           as="h1"
-          size="xl"
-          fontWeight="bold"
-          color="primary.800"
-          textAlign={['center', 'center', 'left', 'left']}
+          textStyle="title1"
+          mb="2em"
+          mt={['1em', '1em', '1em', '2em']}
         >
-          {title}
+          CommunityMate: <br></br>find volunteering opportunities nearby.
         </Heading>
-        <Text
-          fontSize="xl"
-          color="primary.800"
-          fontWeight="normal"
-          lineHeight={1.5}
-          textAlign={['center', 'center', 'left', 'left']}
+      </Center>
+      <section>
+        <Flex
+          align="center"
+          justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
+          direction={{ base: 'column-reverse', md: 'row' }}
+          wrap="no-wrap"
+          minH="auto"
         >
-          {description}
-        </Text>
-      </Stack>
-      <Box w={{ base: '80%', sm: '60%', md: '50%' }} mb={{ base: 12, md: 0 }}>
-        <Image
-          alt="Volunteers helping children"
-          src={image}
-          size="100%"
-          rounded="1rem"
-          shadow="2xl"
-        />
-      </Box>
-    </Flex>
+          <Stack spacing={10} w={{ base: '80%', md: '40%' }}>
+            <Heading as="h2" size="xl" fontWeight="bold">
+              The Platform
+            </Heading>
+            <Text fontSize="xl" fontWeight="normal" lineHeight={1.5}>
+              Through CommunityMate you can discover volunteering events from
+              all kind of fields in Madrid. You will achieve impactful outcomes
+              by connecting with nonprofit associations in your area.
+            </Text>
+          </Stack>
+          <Box
+            w={{ base: '80%', sm: '60%', md: '50%' }}
+            mb={{ base: 12, md: 0 }}
+          >
+            <Image
+              alt="Volunteers helping children"
+              src={'hero.jpg'}
+              size="100%"
+              rounded="1rem"
+              shadow="2xl"
+            />
+          </Box>
+        </Flex>
+      </section>
+    </>
   );
 }
-
-Hero.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-};
-
-//TODO WHAT THE HELL IS THIS
-Hero.defaultProps = {
-  title: 'Find volunteering opportunities nearby',
-  description:
-    'Through our platform you can discover volunteering events from all kind of fields and connect with nonprofit associations to achieve impactful outcomes.',
-  image: 'hero.jpg',
-};

@@ -14,6 +14,7 @@ const Logo = (props) => {
     >
       <Link _focus={{ boxShadow: null }} as={NavLink} to="/">
         <Image
+          borderRadius="0.5em"
           boxSize="2.5em"
           src={logoApp}
           alt="Application Logo, back to Homepage."

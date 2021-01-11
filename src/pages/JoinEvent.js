@@ -3,7 +3,7 @@ import { Box, Heading } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import PropTypes from 'prop-types';
 import Form from '../components/Form';
-import { BreadCrumbAuto } from '../components';
+//import { BreadCrumbAuto } from '../components';
 
 class JoinEvent extends React.Component {
   constructor(props) {
@@ -23,11 +23,11 @@ class JoinEvent extends React.Component {
           }
           aria-live="polite"
         />
-        <BreadCrumbAuto
+        {/*  <BreadCrumbAuto
           id={this.props.details.id}
           name={this.props.details.name}
           isFormPage={true}
-        />
+        /> */}
         <Heading as="h1" size="xl" mt="1em">
           {'Register to ' + this.props.details['name']}
         </Heading>

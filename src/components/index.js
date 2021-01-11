@@ -9,6 +9,7 @@ export { default as Grid } from './Grid';
 export { default as Card } from './Card';
 export { default as ListTagsInCard } from './ListTagsInCard';
 export { default as CardsSection } from './CardsSection';
+export { default as CardsListHome } from './CardsListHome';
 export { default as EventOverview } from './EventOverview';
 export { default as LinkNavigation } from './LinkNavigation';
 export { default as EventFiltersAndCards } from './EventFiltersAndCards';
