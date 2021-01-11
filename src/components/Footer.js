@@ -1,6 +1,5 @@
 import React from 'react';
 
-//TODO FIX
 function Footer() {
   return (
     <div className="py-5 bg-dark fixed-bottom">
