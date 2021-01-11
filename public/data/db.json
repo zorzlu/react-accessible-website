@@ -153,6 +153,26 @@
     }
   ],
   "recommendedEvents": [1, 2, 3],
-  "location": ["bella location", "milan", "tallin", "madrid"],
-  "tag": ["cats", "dogs", "owls", "a11y", "pigs"]
+  "location": [
+    "Castellana",
+    "Paseo del Arte",
+    "Retiro",
+    "La Latina",
+    "Casa de Campo",
+    "Austrias"
+  ],
+  "tag": [
+    "food",
+    "cook",
+    "music",
+    "instruments",
+    "park",
+    "call",
+    "clean",
+    "knit",
+    "deliver",
+    "gardening",
+    "plant",
+    "sports"
+  ]
 }

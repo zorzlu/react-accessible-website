@@ -28,9 +28,10 @@ class JoinEvent extends React.Component {
           name={this.props.details.name}
           isFormPage={true}
         />
-        <Heading as="h1" size="xl">
+        <Heading as="h1" size="xl" mt="1em">
           {'Register to ' + this.props.details['name']}
         </Heading>
+
         <Box maxW={96} p={10} mt={5} boxShadow="sm" rounded="lg">
           <Form role="form" />
         </Box>
