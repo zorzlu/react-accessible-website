@@ -41,13 +41,10 @@ export const getQueryParamsAsObject = (search, acceptedValues) => {
       finalParams[key] = temp;
     }
   });
-  console.log(finalParams);
   return finalParams;
 };
 
 export const objectToQueryParams = (obj) => {
-  console.log('sono dentro il quertop');
-  console.log(obj);
   let temp =
     '?' +
     Object.keys(obj)
@@ -57,7 +54,5 @@ export const objectToQueryParams = (obj) => {
       )
       .join('&');
 
-  console.log('strings');
-  console.log(temp);
   return temp;
 };

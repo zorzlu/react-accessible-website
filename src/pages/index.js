@@ -4,4 +4,3 @@ export { default as Events } from './Events';
 export { default as EventDetails } from './EventDetails';
 export { default as PageNotFound } from './PageNotFound';
 export { default as JoinEvent } from './JoinEvent';
-export { default as Luca } from './Luca';

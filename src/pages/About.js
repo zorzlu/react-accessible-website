@@ -17,11 +17,7 @@ class About extends Component {
   render() {
     return (
       <>
-        <LiveMessage
-          message="Navigated to About Us page"
-          aria-live="polite"
-          clearOnUnmount="true"
-        />
+        <LiveMessage message="Navigated to About Us page" aria-live="polite" />
         <Heading
           as="h1"
           textStyle="h1"

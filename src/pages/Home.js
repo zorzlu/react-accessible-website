@@ -24,11 +24,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <LiveMessage
-          message="Navigated to Home page"
-          aria-live="polite"
-          clearOnUnmount="true"
-        />
+        <LiveMessage message="Navigated to Home page" aria-live="polite" />
         <Hero />
         <Heading
           as="h2"

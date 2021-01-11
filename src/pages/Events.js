@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, Heading, Box } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { LiveMessage } from 'react-aria-live';
-import { Luca } from '.';
+import { EventFiltersAndCards } from '../components';
 
 function EventsList({ evList }) {
   const group = evList;
@@ -37,18 +37,14 @@ class Events extends Component {
   render() {
     return (
       <div name="mainContent">
-        <LiveMessage
-          message="Navigated to Events page"
-          aria-live="polite"
-          clearOnUnmount="true"
-        />
+        <LiveMessage message="Navigated to Events page" aria-live="polite" />
         {console.log('rendered events')}
         <Heading as="h1" size="xl">
           Events
         </Heading>
         <div className="Events">This is the Events page.</div>
         <Box mt="3rem">
-          <Luca db={this.props.db}></Luca>
+          <EventFiltersAndCards db={this.props.db} />
         </Box>
       </div>
     );

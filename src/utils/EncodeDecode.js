@@ -18,8 +18,6 @@ export const encodeValues = (fromSearch, newValue) => {
   Object.keys(newValue).forEach((key) => {
     temp[key] = newValue[key];
   });
-  console.log('valore encodevalues');
-  console.log(temp);
 
   return temp;
 };

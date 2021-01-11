@@ -21,7 +21,6 @@ class JoinEvent extends React.Component {
             'Navigated to ' + this.props.details['name'] + 'Registration Form'
           }
           aria-live="polite"
-          clearOnUnmount="true"
         />
         <Heading as="h1" size="xl">
           {'Register to ' + this.props.details['name']}

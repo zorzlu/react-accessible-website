@@ -11,7 +11,6 @@ export const useQueryAsState = (allowedElements, defaultValue) => {
 
   const updateQuery = useCallback(
     (updatedParams) => {
-      console.log('update called');
       let newUrl =
         pathname +
         objectToQueryParams(encodeValues(searchResultObj, updatedParams));

@@ -5,7 +5,7 @@ import { Logo } from '.';
 
 const Header = ({ children, ...props }) => {
   return (
-    <Center p="1.5em">
+    <Center py="1.5em" px={[null, null, '1.5em']}>
       <Container maxW="75em" {...props}>
         <Logo position="absolute" />
         {children}

@@ -11,3 +11,4 @@ export { default as ListTagsInCard } from './ListTagsInCard';
 export { default as CardsSection } from './CardsSection';
 export { default as EventOverview } from './EventOverview';
 export { default as LinkNavigation } from './LinkNavigation';
+export { default as EventFiltersAndCards } from './EventFiltersAndCards';

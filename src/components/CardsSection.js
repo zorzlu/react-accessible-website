@@ -1,21 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid, Text } from '@chakra-ui/react';
 import { Card } from '.';
-import { LiveMessage } from 'react-aria-live';
+
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 function numOfQueryParams(queryParams) {
   var result = 0;
   var names = [];
+  let first = true;
   Object.keys(queryParams).forEach((key) => {
-    let temp = queryParams[key].length > 0;
+    let temp = queryParams[key].length;
     if (temp > 0) {
+      if (first) {
+        names.push(capitalizeFirstLetter(key));
+        first = false;
+      } else {
+        names.push(key);
+      }
       result += temp;
-      names.push(key);
     }
   });
-  return [result, names.join(', ')];
+  return [result, names.join(' and ')];
 }
 
 /* function filterItself(events, queryParams) {} */
@@ -40,6 +49,7 @@ function getFilteredEventObjects(events, queryParams) {
 
 function CardsSection({ events, queryParams, startHeading }) {
   let evList = getFilteredEventObjects(events, queryParams);
+
   let a11yMessage = '';
   let [numParams, nameParams] = numOfQueryParams(queryParams);
   let numEvents = evList.length;
@@ -47,8 +57,12 @@ function CardsSection({ events, queryParams, startHeading }) {
     a11yMessage = 'No filters applied. ' + numEvents + ' events found.';
   } else {
     a11yMessage =
-      'Filters applied ' + nameParams + '. ' + numEvents + ' events found.';
+      nameParams +
+      ' filters applied, ' +
+      numEvents +
+      (numEvents === 1 ? ' event found.' : ' events found.');
   }
+
   const cards = evList.map((ev) => (
     <Card
       as="li"
@@ -59,11 +73,8 @@ function CardsSection({ events, queryParams, startHeading }) {
   ));
   return (
     <>
-      <LiveMessage
-        message={a11yMessage}
-        aria-live="polite"
-        clearOnUnmount="true"
-      />
+      <Text aria-live="polite">{a11yMessage}</Text>
+
       <SimpleGrid
         as="ul"
         listStyleType="none"

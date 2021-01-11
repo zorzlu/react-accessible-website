@@ -29,7 +29,6 @@ class EventDetails extends Component {
             'Navigated to ' + this.props.details['name'] + 'Event Details Page'
           }
           aria-live="polite"
-          clearOnUnmount="true"
         />
 
         <EventOverview eventdetails={this.props.details} />
