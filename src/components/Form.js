@@ -142,7 +142,7 @@ const Form = () => {
         </FormControl>
         <Button
           mt={4}
-          colorScheme="teal"
+          colorScheme="brand"
           isLoading={formState.isSubmitting}
           type="submit"
         >

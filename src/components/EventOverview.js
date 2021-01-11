@@ -9,6 +9,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const dateFromString = function (dateString) {
   return new Intl.DateTimeFormat('en-GB', {
@@ -18,7 +19,7 @@ const dateFromString = function (dateString) {
   }).format(new Date(dateString));
 };
 
-const EventOverview = () => {
+const EventOverview = ({ eventdetails }) => {
   return (
     <Flex
       align="center"
@@ -40,41 +41,41 @@ const EventOverview = () => {
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {this.props.details['name']}
+          {eventdetails['name']}
         </Heading>
         <Text
           textStyle="paragraph"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Date: ' + dateFromString(this.props.details.dateTime)}
+          {'Date: ' + dateFromString(eventdetails.dateTime)}
         </Text>
         <Text
           textStyle="paragraph"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Location: ' + this.props.details.location}
+          {'Location: ' + eventdetails.location}
         </Text>
         <Text
           textStyle="paragraph"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Telephone number: ' + this.props.details.phone}
+          {'Telephone number: ' + eventdetails.phone}
         </Text>
         <Text
           stextStyle="paragraph"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >
-          {'Association: ' + this.props.details.association}
+          {'Association: ' + eventdetails.association}
         </Text>
         <Button
           as={RouterLink}
-          to={'/event/' + this.props.details['id'] + '/register'}
+          to={'/event/' + eventdetails['id'] + '/register'}
           variant="outline"
-          colorScheme="black"
+          colorScheme="brand"
         >
           Apply now
         </Button>
@@ -83,14 +84,18 @@ const EventOverview = () => {
         <Image
           boxSize="300px"
           objectFit="cover"
-          src={process.env.PUBLIC_URL + '/' + this.props.details.pictures[0]}
-          alt={this.props.details.altPictures[0]}
+          src={process.env.PUBLIC_URL + '/' + eventdetails.pictures[0]}
+          alt={eventdetails.altPictures[0]}
           rounded="1rem"
           shadow="2xl"
         />
       </Box>
     </Flex>
   );
+};
+
+EventOverview.propTypes = {
+  eventdetails: PropTypes.object.isRequired,
 };
 
 export default EventOverview;
