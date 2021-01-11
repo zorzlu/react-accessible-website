@@ -28,7 +28,7 @@ const EventOverview = ({ eventdetails }) => {
           h="30vh"
           maxH="20em"
           objectFit="cover"
-          src={process.env.PUBLIC_URL + '/' + eventdetails.pictures[0]}
+          src={process.env.PUBLIC_URL + eventdetails.pictures[0]}
           alt={eventdetails.altPictures[0]}
           rounded="1rem"
           shadow="xl"

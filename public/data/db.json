@@ -2,75 +2,154 @@
   "events": [
     {
       "id": 0,
-      "name": "Bring food to homeless people",
-      "tag": ["dogs", "cats"],
-      "dateTime": "2021-01-04T23:00:00.266Z",
-      "location": "Bella Location",
+      "name": "Cook Assistant in Nursing Home",
+      "tag": ["food", "cook"],
+      "dateTime": "2021-01-15T23:00:00.266Z",
+      "location": "Castellana",
       "full": false,
-      "association": "Pinco",
-      "phone": "33333333333",
-      "headerText": "I'm a really good volunteering event",
+      "association": "Hillview Nursing Home",
+      "phone": "+34 607 500 402",
+      "headerText": "Help to prepare and serve meals in a nursing home",
       "longDescription": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet est at turpis imperdiet elementum. Nulla accumsan fermentum ex, ut gravida dui blandit id. Etiam sollicitudin sodales nisi id eleifend. Ut gravida, odio varius vestibulum luctus, lacus sem euismod elit, at sagittis dolor turpis eu magna. Duis ut tortor aliquam, cursus tortor vel, porttitor neque. Cras ut dui tincidunt, rhoncus mi et, viverra tortor. Nam elit purus, gravida nec purus at, suscipit mollis arcu. Nam ornare nisl quis felis consectetur ultrices. Nulla aliquet metus quis lectus volutpat dignissim. Quisque ut diam ac ligula interdum suscipit. Vestibulum dignissim velit sit amet libero facilisis, id varius magna elementum. In rhoncus dictum nisl id condimentum. Proin eget est maximus, suscipit leo vitae, mattis nisi. Duis commodo ex vitae viverra porttitor.",
-        "Proin ac enim lobortis, commodo urna et, eleifend urna. Donec bibendum nisl ac ligula aliquam, ut gravida risus pulvinar. Fusce sit amet diam odio. Aliquam erat volutpat. Curabitur varius sagittis urna et efficitur. Donec sit amet nibh eu diam sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc iaculis lacus eu quam iaculis cursus. Sed posuere quis diam in accumsan. Maecenas blandit vehicula facilisis. Cras sit amet bibendum nulla. Nullam purus mauris, interdum eu justo nec, fermentum volutpat ipsum."
+        "Hillview Nursing Home are currently looking for a Part-time Assistant Cook. ",
+        "The tasks include preparation and serving meals to the residents. ",
+        "No professional chef qualification needed, applicants with an interest in cooking and/or previous catering experience welcomed."
       ],
-      "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
-      "pictures": ["logo512.png", "logo192.png"],
-      "altPictures": ["your summer image 1", "your summer image 2"]
+      "activities": [
+        "Prepare and serve meals for the residents",
+        "Improve your cooking knowledge"
+      ],
+      "pictures": ["/pics/Catering.jpg"],
+      "altPictures": ["Two people cooking"]
     },
     {
       "id": 1,
-      "name": "event 1",
-      "tag": ["dogs", "pigs"],
-      "dateTime": "2021-01-04T23:00:00.266Z",
-      "location": "Milan",
+      "name": "Music club",
+      "tag": ["music", "instruments"],
+      "dateTime": "2021-01-22T23:00:00.266Z",
+      "location": "Paseo del Arte",
       "full": false,
-      "association": "Mario",
-      "phone": "33333333333",
+      "association": "Youth Music Club",
+      "phone": "+34 600 341 500",
       "headerText": "I'm a really good volunteering event",
       "longDescription": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet est at turpis imperdiet elementum. Nulla accumsan fermentum ex, ut gravida dui blandit id. Etiam sollicitudin sodales nisi id eleifend. Ut gravida, odio varius vestibulum luctus, lacus sem euismod elit, at sagittis dolor turpis eu magna. Duis ut tortor aliquam, cursus tortor vel, porttitor neque. Cras ut dui tincidunt, rhoncus mi et, viverra tortor. Nam elit purus, gravida nec purus at, suscipit mollis arcu. Nam ornare nisl quis felis consectetur ultrices. Nulla aliquet metus quis lectus volutpat dignissim. Quisque ut diam ac ligula interdum suscipit. Vestibulum dignissim velit sit amet libero facilisis, id varius magna elementum. In rhoncus dictum nisl id condimentum. Proin eget est maximus, suscipit leo vitae, mattis nisi. Duis commodo ex vitae viverra porttitor.",
-        "Proin ac enim lobortis, commodo urna et, eleifend urna. Donec bibendum nisl ac ligula aliquam, ut gravida risus pulvinar. Fusce sit amet diam odio. Aliquam erat volutpat. Curabitur varius sagittis urna et efficitur. Donec sit amet nibh eu diam sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc iaculis lacus eu quam iaculis cursus. Sed posuere quis diam in accumsan. Maecenas blandit vehicula facilisis. Cras sit amet bibendum nulla. Nullam purus mauris, interdum eu justo nec, fermentum volutpat ipsum."
+        "We are looking for people who enjoy working with young people and can share their love for music. ",
+        "Do you have knowledge of how to use studio equipment or to record music? Would like to share this knowledge? Do you feel you would enjoy working with young people and share your skills with them? ",
+        "Your role will be to share your musical skill with young people who attend our Music Club. The young people will be in groups according to their ages. There will be a supervisor that will organize all of the activities. "
       ],
-      "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
-      "pictures": ["logo512.png", "logo192.png"],
-      "altPictures": ["your summer image 1", "your summer image 2"]
+      "activities": [
+        "Help children with singing, recording or playing instruments",
+        "Guide young people to reach their artistic potential"
+      ],
+      "pictures": ["/pics/Instrument.jpg"],
+      "altPictures": ["Man helping children play an instrument"]
     },
     {
       "id": 2,
-      "name": "event 2",
-      "tag": ["owls", "cats"],
-      "dateTime": "2021-01-04T23:00:00.266Z",
-      "location": "Rome",
+      "name": "Clean Parks",
+      "tag": ["park", "clean"],
+      "dateTime": "2021-02-10T23:00:00.266Z",
+      "location": "Retiro",
       "full": false,
-      "association": "Palla",
-      "phone": "33333333333",
-      "headerText": "I'm a really good volunteering event",
+      "association": "CleanGreens",
+      "phone": "+34 607 231 402",
+      "headerText": "CleanGreens help local communities to keep green areas clean.",
       "longDescription": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet est at turpis imperdiet elementum. Nulla accumsan fermentum ex, ut gravida dui blandit id. Etiam sollicitudin sodales nisi id eleifend. Ut gravida, odio varius vestibulum luctus, lacus sem euismod elit, at sagittis dolor turpis eu magna. Duis ut tortor aliquam, cursus tortor vel, porttitor neque. Cras ut dui tincidunt, rhoncus mi et, viverra tortor. Nam elit purus, gravida nec purus at, suscipit mollis arcu. Nam ornare nisl quis felis consectetur ultrices. Nulla aliquet metus quis lectus volutpat dignissim. Quisque ut diam ac ligula interdum suscipit. Vestibulum dignissim velit sit amet libero facilisis, id varius magna elementum. In rhoncus dictum nisl id condimentum. Proin eget est maximus, suscipit leo vitae, mattis nisi. Duis commodo ex vitae viverra porttitor.",
-        "Proin ac enim lobortis, commodo urna et, eleifend urna. Donec bibendum nisl ac ligula aliquam, ut gravida risus pulvinar. Fusce sit amet diam odio. Aliquam erat volutpat. Curabitur varius sagittis urna et efficitur. Donec sit amet nibh eu diam sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc iaculis lacus eu quam iaculis cursus. Sed posuere quis diam in accumsan. Maecenas blandit vehicula facilisis. Cras sit amet bibendum nulla. Nullam purus mauris, interdum eu justo nec, fermentum volutpat ipsum."
+        "CleanGreens has a number of different communities groups operating in environmental related fields. Each month these groups host cleaning events in parks. ",
+        "Volunteers who join the park cleaning events will be helping the local community remove litter from green areas. ",
+        "This is a great way to meet new people and have a positive impact on the environment."
       ],
-      "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
-      "pictures": ["logo512.png", "logo192.png"],
-      "altPictures": ["your summer image 1", "your summer image 2"]
+      "activities": [
+        "Establish groups who form a network engaged in environmental actions",
+        "Enhance the value of the green areas in urban spaces",
+        "Reduce the environmental damage"
+      ],
+      "pictures": ["/pics/CleaningParks.jpg"],
+      "altPictures": ["Volunteers cleaning a park"]
     },
     {
       "id": 3,
-      "name": "dinner with Loic",
-      "tag": ["owls", "a11y"],
-      "dateTime": "2021-01-04T23:00:00.266Z",
-      "location": "Madrid",
+      "name": "Knit for Homeless Charities",
+      "tag": ["knit"],
+      "dateTime": "2021-03-04T23:00:00.266Z",
+      "location": "La Latina",
       "full": false,
-      "association": "EIT Digital",
-      "phone": "33333333333",
-      "headerText": "I wanna dance with somebody",
+      "association": "Revived",
+      "phone": "+34 607 451 031",
+      "headerText": "Knit for Homeless Charities",
       "longDescription": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet est at turpis imperdiet elementum. Nulla accumsan fermentum ex, ut gravida dui blandit id. Etiam sollicitudin sodales nisi id eleifend. Ut gravida, odio varius vestibulum luctus, lacus sem euismod elit, at sagittis dolor turpis eu magna. Duis ut tortor aliquam, cursus tortor vel, porttitor neque. Cras ut dui tincidunt, rhoncus mi et, viverra tortor. Nam elit purus, gravida nec purus at, suscipit mollis arcu. Nam ornare nisl quis felis consectetur ultrices. Nulla aliquet metus quis lectus volutpat dignissim. Quisque ut diam ac ligula interdum suscipit. Vestibulum dignissim velit sit amet libero facilisis, id varius magna elementum. In rhoncus dictum nisl id condimentum. Proin eget est maximus, suscipit leo vitae, mattis nisi. Duis commodo ex vitae viverra porttitor.",
-        "Proin ac enim lobortis, commodo urna et, eleifend urna. Donec bibendum nisl ac ligula aliquam, ut gravida risus pulvinar. Fusce sit amet diam odio. Aliquam erat volutpat. Curabitur varius sagittis urna et efficitur. Donec sit amet nibh eu diam sagittis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc iaculis lacus eu quam iaculis cursus. Sed posuere quis diam in accumsan. Maecenas blandit vehicula facilisis. Cras sit amet bibendum nulla. Nullam purus mauris, interdum eu justo nec, fermentum volutpat ipsum."
+        "If you like to knit and would be interested in supporting people affected by homelessness then we would love to hear from you! ",
+        "Revived is a community project created in in 2017. The goal is to knit and crochet warm garments for people affected by homelessness and poverty. ",
+        "Garments are donated to Homeless charities and organisations to distribute to those that need them most."
       ],
-      "activities": ["climbing", "singingHannahMontana", "AvrilLavigne"],
-      "pictures": ["logo512.png", "logo192.png"],
-      "altPictures": ["your summer image 1", "your summer image 2"]
+      "activities": [
+        "Reuse leftovers to knit and crochet warm garments",
+        "Learn how to make patterns for hats, cowls and mittens"
+      ],
+      "pictures": ["/pics/Knit.jpg"],
+      "altPictures": ["Two hands knitting"]
+    },
+    {
+      "id": 4,
+      "name": "Meals on Wheels",
+      "tag": ["food", "deliver"],
+      "dateTime": "2021-03-22T23:00:00.266Z",
+      "location": "Casa de Campo",
+      "full": false,
+      "association": "DriveMeet",
+      "phone": "+34 600 100 202",
+      "headerText": "Pick up and deliver meals to people who are not able to leave their homes.",
+      "longDescription": [
+        "Do you have two and a half hours to spare during the week and like to support people in your community? ",
+        "We are looking for friendly volunteer drivers to help deliver meals to people in their homes. All containers and training is provided. "
+      ],
+      "activities": [
+        "Deliver meals to people who are not able to leave their homes"
+      ],
+      "pictures": ["/pics/Deliver.jpg"],
+      "altPictures": ["Man putting a package in car"]
+    },
+    {
+      "id": 5,
+      "name": "Volunteer Gardener",
+      "tag": ["gardening", "plant"],
+      "dateTime": "2021-04-03T23:00:00.266Z",
+      "location": "Austrias",
+      "full": false,
+      "association": "Cherry Orchard Community Garden",
+      "phone": "+34 600 100 202",
+      "headerText": "Help with planting and general gardening.",
+      "longDescription": [
+        "Have you got green fingers or interested in learning more about gardening? We are looking for people to get involved with our Cherry Orchard Community Garden. ",
+        "You will be helping with planting and general gardening. You'll also be meeting new people and being part of a valuable community resource. "
+      ],
+      "activities": [
+        "Help create a green space",
+        "Socialize and bond with people while improving your gardening skills"
+      ],
+      "pictures": ["/pics/Planting.jpg"],
+      "altPictures": ["A person planting a green plant"]
+    },
+    {
+      "id": 6,
+      "name": "Coach Volunteer",
+      "tag": ["bowling", "sports"],
+      "dateTime": "2021-04-03T23:00:00.266Z",
+      "location": "La Latina",
+      "full": false,
+      "association": "BowlClub",
+      "phone": "+34 630 254 300",
+      "headerText": "Support in bowling activities.",
+      "longDescription": [
+        "We are a Special Olympics bowling club that meet every Thursday. ",
+        "We are looking for volunteers to help supervise and mentor our athletes. "
+      ],
+      "activities": [
+        "Help organizng bowling activities",
+        "Help maintain the equipment"
+      ],
+      "pictures": ["/pics/Coach.jpg"],
+      "altPictures": ["A person wearing a coach T-shirt"]
     }
   ],
   "recommendedEvents": [1, 2, 3],
