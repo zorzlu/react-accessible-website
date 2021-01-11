@@ -79,18 +79,22 @@ class Home extends Component {
           lineHeight={2.5}
           textAlign={['center', 'center', 'left', 'left']}
           fontSize="lg"
-        >
-          <OrderedList>
-            <ListItem>Browse our wide selection of events.</ListItem>
-            <ListItem>
-              Filter events by topic and location to find your best match.
-            </ListItem>
-            <ListItem>
-              Apply to your chosen event and fill in the form.
-            </ListItem>
-            <ListItem>Now you only have to attend and enjoy!</ListItem>
-          </OrderedList>
-        </Text>
+        ></Text>
+        <OrderedList>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Browse our wide selection of events.
+          </ListItem>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Filter events by topic and location to find your best match.
+          </ListItem>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Apply to your chosen event and fill in the form.
+          </ListItem>
+          <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            Now you only have to attend and enjoy!
+          </ListItem>
+        </OrderedList>
+
         <Heading
           as="h2"
           textStyle="h1"
