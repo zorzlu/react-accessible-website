@@ -74,12 +74,6 @@ class Home extends Component {
             'The application process is simple and quick. You just need to follow four steps:'
           }
         </Text>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2.5}
-          textAlign={['center', 'center', 'left', 'left']}
-          fontSize="lg"
-        ></Text>
         <OrderedList>
           <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
             Browse our wide selection of events.
@@ -94,7 +88,6 @@ class Home extends Component {
             Now you only have to attend and enjoy!
           </ListItem>
         </OrderedList>
-
         <Heading
           as="h2"
           textStyle="h1"

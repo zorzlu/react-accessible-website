@@ -85,12 +85,6 @@ class About extends Component {
         >
           {'Our goals'}
         </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2.5}
-          textAlign={['center', 'center', 'left', 'left']}
-          fontSize="lg"
-        ></Text>
         <UnorderedList>
           <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
             Connect people with volunteering associations and increase social
@@ -120,6 +114,14 @@ class About extends Component {
         >
           {'Contact information'}
         </Heading>
+        <Text
+          textStyle="paragraph"
+          lineHeight={2}
+          textAlign={['center', 'center', 'left', 'left']}
+          fontSize="lg"
+        >
+          {'You can contact us at:'}
+        </Text>
       </>
     );
   }
