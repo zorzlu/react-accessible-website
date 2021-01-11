@@ -26,7 +26,7 @@ class About extends Component {
       <>
         <LiveMessage message="Navigated to About Us page" aria-live="polite" />
         <Heading
-          as="h2"
+          as="h1"
           textStyle="h1"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
