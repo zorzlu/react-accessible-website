@@ -90,7 +90,7 @@ class About extends Component {
             textAlign={['center', 'center', 'left', 'left']}
             fontSize="lg"
           >
-            {'You can contact us at:'}
+            {'You can contact us at: +34 636 801 400'}
           </Text>
         </section>
       </>
