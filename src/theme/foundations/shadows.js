@@ -1,7 +1,7 @@
 const shadows = {
   search:
     '0 0 0 1px rgba(16,22,26,.1), 0 4px 8px rgba(16,22,26,.2), 0 18px 46px 6px rgba(16,22,26,.2)',
-  outline: '0 0 0 3px rgba(66, 153, 225, 0.6)',
+  outline: '0 0 0 3px rgba(255, 88 , 96, 0.6)',
 };
 
 export default shadows;

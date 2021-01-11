@@ -40,12 +40,7 @@ class Home extends Component {
               boxSize="120px"
               rounded="1rem"
             />
-            <Text
-              fontSize="xl"
-              color="primary.800"
-              fontWeight="normal"
-              lineHeight={1.5}
-            >
+            <Text fontSize="xl" fontWeight="normal" lineHeight={1.5}>
               {
                 'It has always been our mission to help people all around reach their potential and bring their impact into society. We believe that volunteering is the key to individuals obtaining a deeper understanding of the world, and that the world is a better place when people have a deeper empathy. '
               }

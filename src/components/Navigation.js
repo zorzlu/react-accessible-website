@@ -77,7 +77,6 @@ const Navigation = () => {
       maxW="75em"
       w={[null, null, '20 rem']}
       bg="transparent"
-      color="primary.700"
       borderColor="black"
       direction={['row', 'row', 'row', 'row']}
     >
