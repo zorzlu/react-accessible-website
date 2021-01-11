@@ -69,7 +69,7 @@ function Card({ eventDetails, startingHeading, ...rest }) {
             _focus={{ boxShadow: 'none' }}
             onClick={(e) => luca(e)}
             as={RouterLink}
-            to={'/events/' + eventDetails.id}
+            to={'/event/' + eventDetails.id}
           >
             {eventDetails.name}
           </Link>

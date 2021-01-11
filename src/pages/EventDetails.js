@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -10,7 +9,11 @@ import {
 } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import { Link as RouterLink } from 'react-router-dom';
-import { EventOverview } from '../components';
+import { EventOverview, BreadCrumbAuto } from '../components';
+
+function strConv(textConvertToString) {
+  return textConvertToString.toString().toLowerCase().replace(' ', '-');
+}
 
 class EventDetails extends Component {
   constructor(props) {
@@ -21,16 +24,21 @@ class EventDetails extends Component {
   componentDidMount() {
     this.props.setNewPage(this.props.details['name']);
   }
+
   render() {
     return (
       <React.Fragment>
         <LiveMessage
           message={
-            'Navigated to ' + this.props.details['name'] + 'Event Details Page'
+            'Navigated to ' + this.props.details['name'] + ' Event Details Page'
           }
           aria-live="polite"
         />
-
+        <BreadCrumbAuto
+          id={this.props.details.id}
+          name={this.props.details.name}
+          isFormPage={false}
+        />
         <EventOverview eventdetails={this.props.details} />
 
         <Heading
@@ -63,7 +71,9 @@ class EventDetails extends Component {
         >
           <UnorderedList>
             {this.props.details.activities.map((listitem) => (
-              <ListItem>{listitem}</ListItem>
+              <ListItem key={strConv(listitem) + '-activity'}>
+                {listitem}
+              </ListItem>
             ))}
           </UnorderedList>
         </Text>

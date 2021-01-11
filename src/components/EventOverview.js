@@ -65,7 +65,7 @@ const EventOverview = ({ eventdetails }) => {
           {'Telephone number: ' + eventdetails.phone}
         </Text>
         <Text
-          stextStyle="paragraph"
+          textStyle="paragraph"
           lineHeight={2}
           textAlign={['center', 'center', 'left', 'left']}
         >

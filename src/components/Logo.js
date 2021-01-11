@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import { Box, Image, Link } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 
 const Logo = (props) => {
@@ -12,13 +12,13 @@ const Logo = (props) => {
       _hover={{ boxShadow: 'outline' }}
       {...props}
     >
-      <NavLink to="/">
+      <Link _focus={{ boxShadow: null }} as={NavLink} to="/">
         <Image
           boxSize="2.5em"
           src={process.env.PUBLIC_URL + 'logo.svg'}
           alt="Application Logo, back to Homepage."
         />
-      </NavLink>
+      </Link>
     </Box>
   );
 };
