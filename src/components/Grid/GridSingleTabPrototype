@@ -1,0 +1,93 @@
+/* eslint-disable no-unused-vars */
+import React, { useRef } from 'react';
+import { useRemoveInteractiveElementsFromTabOrder } from './useRemoveInteractive';
+import { moveFocus } from './focusManagement';
+
+export function GridSingleTab() {
+  const grid = useRef(null);
+
+  useRemoveInteractiveElementsFromTabOrder(grid);
+
+  const handleKeyDown = (e) => {
+    // Prevent scrolling
+    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      e.preventDefault();
+    }
+    if (e.key === 'ArrowUp') moveFocus(grid.current, 'up');
+    if (e.key === 'ArrowDown') moveFocus(grid.current, 'down');
+    if (e.key === 'ArrowLeft') moveFocus(grid.current, 'left');
+    if (e.key === 'ArrowRight') moveFocus(grid.current, 'right');
+  };
+
+  return {
+    /* <React.Fragment>
+      <div
+        ref={grid}
+        className="grid"
+        role="grid"
+        tabIndex="0"
+        onKeyDown={handleKeyDown}
+      >
+        <div className="grid__header-row" role="row" aria-rowindex="1">
+          <div role="columnheader" aria-colindex="1">
+            <button>TITLE</button>
+          </div>
+          <div role="columnheader" aria-colindex="2">
+            <button>ALBUM</button>
+          </div>
+          <div role="columnheader" aria-colindex="3">
+            DURATION
+          </div>
+        </div>
+        <div className="grid__row" role="row" aria-rowindex="2">
+          <div role="gridcell" aria-colindex="1">
+            <div>Black Parade</div>
+            <a href="#">Beyoncé</a>
+          </div>
+          <div role="gridcell" aria-colindex="2" />
+          <div role="gridcell" aria-colindex="3">
+            4:41
+            <button className="heart">
+              <span className="sr-only">Add to your liked songs</span>♡
+            </button>
+          </div>
+        </div>
+        <div className="grid__row" role="row" aria-rowindex="3">
+          <div role="gridcell" aria-colindex="1">
+            <div>Texas Sun</div>
+            <a href="#">Kruangbin</a>,<a href="#">Leon Bridges</a>
+          </div>
+          <div role="gridcell" aria-colindex="2">
+            <a href="#">Texas Sun</a>
+          </div>
+          <div role="gridcell" aria-colindex="3">
+            4:12
+            <button class="heart">
+              <span class="sr-only">Add to your liked songs</span>♡
+            </button>
+          </div>
+        </div>
+        <div class="grid__row" role="row" aria-rowindex="4">
+          <div role="gridcell" aria-colindex="1">
+            <div>Disconnect</div>
+            <a href="#">Basement</a>
+          </div>
+          <div role="gridcell" aria-colindex="2">
+            <a href="#">Beside Myself</a>
+          </div>
+          <div role="gridcell" aria-colindex="3">
+            3:29
+            <button class="heart">
+              <span class="sr-only">Add to your liked songs</span>♡
+            </button>
+          </div>
+        </div>
+      </div>
+      <img
+        class="arrow-keys-indicator"
+        src="https://www.w3.org/TR/wai-aria-practices/examples/grid/imgs/black_keys.png"
+        alt=""
+      /> 
+    </React.Fragment>*/
+  };
+}
