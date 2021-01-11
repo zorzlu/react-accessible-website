@@ -58,6 +58,6 @@ Hero.propTypes = {
 Hero.defaultProps = {
   title: 'Find volunteering opportunities nearby',
   description:
-    'Through our platform you can discover voluunteering events from all kind of fields and connect with nonprofit associations to achieve impactful outcomes.',
+    'Through our platform you can discover volunteering events from all kind of fields and connect with nonprofit associations to achieve impactful outcomes.',
   image: 'hero.jpg',
 };

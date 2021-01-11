@@ -33,27 +33,9 @@ class About extends Component {
         >
           {'Who are we'}
         </Heading>
-        <Text
-          textStyle="paragraph"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-          fontSize="lg"
-        >
-          {
-            'We are a dedicated team driven by the goal to provide a unique experience to every partner that chooses to join us.'
-          }
-        </Text>
-        <Heading
-          as="h2"
-          textStyle="h1"
-          lineHeight={2}
-          textAlign={['center', 'center', 'left', 'left']}
-        >
-          {'History'}
-        </Heading>
         <Stack direction={'row'} spacing={5}>
           <Image
-            alt="2 people holding hands"
+            alt="Two people holding hands"
             src={'helpinghand.jpg'}
             //size="40%"
             boxSize="200px"

@@ -36,7 +36,7 @@ class Home extends Component {
         </Heading>
         <Stack direction={'row'} spacing={5}>
           <Image
-            alt="Mission icon"
+            alt="Icon with a flag"
             src={'mission.png'}
             boxSize="120px"
             rounded="1rem"
