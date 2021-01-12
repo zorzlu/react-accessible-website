@@ -1,0 +1,178 @@
+{
+  "events": [
+    {
+      "id": 0,
+      "name": "Cook Assistant in Nursing Home",
+      "tag": ["food", "cook"],
+      "dateTime": "2021-01-15T23:00:00.266Z",
+      "location": "Castellana",
+      "full": false,
+      "association": "Hillview Nursing Home",
+      "phone": "+34 607 500 402",
+      "headerText": "Help to prepare and serve meals in a nursing home",
+      "longDescription": [
+        "Hillview Nursing Home are currently looking for a Part-time Assistant Cook. ",
+        "The tasks include preparation and serving meals to the residents. ",
+        "No professional chef qualification needed, applicants with an interest in cooking and/or previous catering experience welcomed."
+      ],
+      "activities": [
+        "Prepare and serve meals for the residents",
+        "Improve your cooking knowledge"
+      ],
+      "pictures": ["/pics/Catering.jpg"],
+      "altPictures": ["Two people cooking"]
+    },
+    {
+      "id": 1,
+      "name": "Music club",
+      "tag": ["music", "instruments"],
+      "dateTime": "2021-01-22T23:00:00.266Z",
+      "location": "Paseo del Arte",
+      "full": false,
+      "association": "Youth Music Club",
+      "phone": "+34 600 341 500",
+      "headerText": "I'm a really good volunteering event",
+      "longDescription": [
+        "We are looking for people who enjoy working with young people and can share their love for music. ",
+        "Do you have knowledge of how to use studio equipment or to record music? Would like to share this knowledge? Do you feel you would enjoy working with young people and share your skills with them? ",
+        "Your role will be to share your musical skill with young people who attend our Music Club. The young people will be in groups according to their ages. There will be a supervisor that will organize all of the activities. "
+      ],
+      "activities": [
+        "Help children with singing, recording or playing instruments",
+        "Guide young people to reach their artistic potential"
+      ],
+      "pictures": ["/pics/Instrument.jpg"],
+      "altPictures": ["Man helping children play an instrument"]
+    },
+    {
+      "id": 2,
+      "name": "Clean Parks",
+      "tag": ["park", "clean"],
+      "dateTime": "2021-02-10T23:00:00.266Z",
+      "location": "Retiro",
+      "full": false,
+      "association": "CleanGreens",
+      "phone": "+34 607 231 402",
+      "headerText": "CleanGreens help local communities to keep green areas clean.",
+      "longDescription": [
+        "CleanGreens has a number of different communities groups operating in environmental related fields. Each month these groups host cleaning events in parks. ",
+        "Volunteers who join the park cleaning events will be helping the local community remove litter from green areas. ",
+        "This is a great way to meet new people and have a positive impact on the environment."
+      ],
+      "activities": [
+        "Establish groups who form a network engaged in environmental actions",
+        "Enhance the value of the green areas in urban spaces",
+        "Reduce the environmental damage"
+      ],
+      "pictures": ["/pics/CleaningParks.jpg"],
+      "altPictures": ["Volunteers cleaning a park"]
+    },
+    {
+      "id": 3,
+      "name": "Knit for Homeless Charities",
+      "tag": ["knit"],
+      "dateTime": "2021-03-04T23:00:00.266Z",
+      "location": "La Latina",
+      "full": false,
+      "association": "Revived",
+      "phone": "+34 607 451 031",
+      "headerText": "Knit for Homeless Charities",
+      "longDescription": [
+        "If you like to knit and would be interested in supporting people affected by homelessness then we would love to hear from you! ",
+        "Revived is a community project created in in 2017. The goal is to knit and crochet warm garments for people affected by homelessness and poverty. ",
+        "Garments are donated to Homeless charities and organisations to distribute to those that need them most."
+      ],
+      "activities": [
+        "Reuse leftovers to knit and crochet warm garments",
+        "Learn how to make patterns for hats, cowls and mittens"
+      ],
+      "pictures": ["/pics/Knit.jpg"],
+      "altPictures": ["Two hands knitting"]
+    },
+    {
+      "id": 4,
+      "name": "Meals on Wheels",
+      "tag": ["food", "deliver"],
+      "dateTime": "2021-03-22T23:00:00.266Z",
+      "location": "Casa de Campo",
+      "full": false,
+      "association": "DriveMeet",
+      "phone": "+34 600 100 202",
+      "headerText": "Pick up and deliver meals to people who are not able to leave their homes.",
+      "longDescription": [
+        "Do you have two and a half hours to spare during the week and like to support people in your community? ",
+        "We are looking for friendly volunteer drivers to help deliver meals to people in their homes. All containers and training is provided. "
+      ],
+      "activities": [
+        "Deliver meals to people who are not able to leave their homes"
+      ],
+      "pictures": ["/pics/Deliver.jpg"],
+      "altPictures": ["Man putting a package in car"]
+    },
+    {
+      "id": 5,
+      "name": "Volunteer Gardener",
+      "tag": ["gardening", "plant"],
+      "dateTime": "2021-04-03T23:00:00.266Z",
+      "location": "Austrias",
+      "full": false,
+      "association": "Cherry Orchard Community Garden",
+      "phone": "+34 600 100 202",
+      "headerText": "Help with planting and general gardening.",
+      "longDescription": [
+        "Have you got green fingers or interested in learning more about gardening? We are looking for people to get involved with our Cherry Orchard Community Garden. ",
+        "You will be helping with planting and general gardening. You'll also be meeting new people and being part of a valuable community resource. "
+      ],
+      "activities": [
+        "Help create a green space",
+        "Socialize and bond with people while improving your gardening skills"
+      ],
+      "pictures": ["/pics/Planting.jpg"],
+      "altPictures": ["A person planting a green plant"]
+    },
+    {
+      "id": 6,
+      "name": "Coach Volunteer",
+      "tag": ["bowling", "sports"],
+      "dateTime": "2021-04-03T23:00:00.266Z",
+      "location": "La Latina",
+      "full": false,
+      "association": "BowlClub",
+      "phone": "+34 630 254 300",
+      "headerText": "Support in bowling activities.",
+      "longDescription": [
+        "We are a Special Olympics bowling club that meet every Thursday. ",
+        "We are looking for volunteers to help supervise and mentor our athletes. "
+      ],
+      "activities": [
+        "Help organizng bowling activities",
+        "Help maintain the equipment"
+      ],
+      "pictures": ["/pics/Coach.jpg"],
+      "altPictures": ["A person wearing a coach T-shirt"]
+    }
+  ],
+  "recommendedEvents": [1, 2, 3, 4],
+  "location": [
+    "Castellana",
+    "Paseo del Arte",
+    "Retiro",
+    "La Latina",
+    "Casa de Campo",
+    "Austrias"
+  ],
+  "tag": [
+    "food",
+    "cook",
+    "music",
+    "instruments",
+    "park",
+    "call",
+    "clean",
+    "knit",
+    "deliver",
+    "gardening",
+    "plant",
+    "sports"
+  ]
+}
