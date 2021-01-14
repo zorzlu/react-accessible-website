@@ -26,12 +26,12 @@ export default function Hero() {
       <section>
         <Flex
           align="center"
-          justify={{ base: 'center', md: 'space-around', xl: 'space-between' }}
+          justify={{ base: 'center', md: 'space-between' }}
           direction={{ base: 'column-reverse', md: 'row' }}
           wrap="no-wrap"
           minH="auto"
         >
-          <Stack spacing={10} w={{ base: '80%', md: '40%' }}>
+          <Stack spacing={10} w={{ base: '100%', md: '40%' }}>
             <Heading as="h2" size="xl" fontWeight="bold">
               The Platform
             </Heading>
@@ -41,16 +41,11 @@ export default function Hero() {
               by connecting with nonprofit associations in your area.
             </Text>
           </Stack>
-          <Box
-            w={{ base: '80%', sm: '60%', md: '50%' }}
-            mb={{ base: 12, md: 0 }}
-          >
+          <Box w={{ base: '100%', md: '50%' }} mb={{ base: 12, md: 0 }}>
             <Image
-              alt="Volunteers helping children"
-              src={'hero.jpg'}
+              alt="Graphical draw showing CommunityMate logo exploded into multiple volunteering activities."
+              src={'logoexp.jpg'}
               size="100%"
-              rounded="1rem"
-              shadow="2xl"
             />
           </Box>
         </Flex>

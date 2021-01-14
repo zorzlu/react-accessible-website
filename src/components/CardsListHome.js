@@ -25,7 +25,7 @@ function CardsListHome({ events, queryParams, startHeading }) {
       as="ul"
       listStyleType="none"
       justifyItems="centre"
-      minChildWidth="15rem"
+      minChildWidth={['13rem', '15rem']}
       spacing="2rem"
     >
       {cards}
