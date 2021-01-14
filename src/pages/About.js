@@ -8,6 +8,7 @@ import {
   Stack,
   Image,
   Box,
+  Flex,
 } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import { Grid } from '../components';
@@ -30,32 +31,43 @@ class About extends Component {
           {'About CommunityMate'}
         </Heading>
         <section>
-          <Stack
-            direction={['column', 'column', 'row']}
-            mt="5em"
-            spacing="3em"
-            px={[null, null, '5em', '5em']}
+          <Flex
+            mt="2em"
+            align="center"
+            justify={{ base: 'center', md: 'space-between' }}
+            direction={{ base: 'column-reverse', md: 'row' }}
+            wrap="no-wrap"
+            minH="auto"
           >
-            <Image
-              alt="Two people holding hands"
-              src={'helpinghand.jpg'}
-              width={['100%', '100%', '20em']}
-              maxH={['15em', '15em', '50em']}
-              objectFit="cover"
-              rounded="1rem"
-              shadow="2xl"
-            />
-            <Box>
-              <Heading as="h2" size="md" fontWeight="bold" mb="1em">
+            <Stack spacing={10} w={{ base: '100%', md: '60%' }}>
+              <Heading as="h2" size="md" fontWeight="bold">
                 Our Story
               </Heading>
-              <Text textStyle="p" fontSize="lg">
-                {
-                  'Launched at the end of 2020, we first set out to create a bridge between people that want to have a greater impact into society and associations that offer interesting opportunities. Every partner and volunteer who joined us since then, encouraged us to believe and work harder on our mission. Today we are using all of our resources to create an activated community and help people find their own way to see the world.'
-                }
+              <Text fontSize="lg" fontWeight="normal" lineHeight={2}>
+                Launched at the end of 2020, we first set out to create a bridge
+                between people that want to have a greater impact into society
+                and associations that offer interesting opportunities. Every
+                partner and volunteer who joined us since then, encouraged us to
+                believe and work harder on our mission. Today we are using all
+                of our resources to create an activated community and help
+                people find their own way to see the world.
               </Text>
+            </Stack>
+            <Box
+              w={{ base: '100%', md: '35%' }}
+              mb={{ base: 12, md: 0 }}
+              align="center"
+            >
+              <Image
+                alt="Two people holding hands"
+                src={'helpinghand.jpg'}
+                rounded="1em"
+                objectFit="cover"
+                maxH="14em"
+                shadow="2xl"
+              />
             </Box>
-          </Stack>
+          </Flex>
         </section>
         <section>
           <Heading as="h2" size="md" mt="3em" fontWeight="bold" mb="1em">
@@ -84,12 +96,7 @@ class About extends Component {
           <Heading as="h2" size="md" mt="3em" fontWeight="bold" mb="1em">
             Contact Information
           </Heading>
-          <Text
-            textStyle="paragraph"
-            lineHeight={2}
-            textAlign={['center', 'center', 'left', 'left']}
-            fontSize="lg"
-          >
+          <Text textStyle="paragraph" lineHeight={2} fontSize="lg">
             {'You can contact us at: +34 636 801 400'}
           </Text>
         </section>

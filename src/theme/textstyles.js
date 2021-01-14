@@ -5,7 +5,7 @@ const textStyles = {
     fontWeight: 'bold',
     letterSpacing: '-0.015em',
     lineHeight: '1.24',
-    fontSize: { base: '2rem', md: '3.5rem' },
+    fontSize: { base: '1.5rem', sm: '2rem', md: '3.5rem' },
   },
   title2: {
     fontFamily: 'heading',
