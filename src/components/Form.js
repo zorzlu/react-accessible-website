@@ -116,20 +116,20 @@ const Form = () => {
         <FormControl>
           <FormLabel htmlFor="skills">Skills</FormLabel>
           <Stack pl={6} mt={1} spacing={1}>
-            <Checkbox name="skills" value="skill 1" ref={register}>
-              Skill 1
+            <Checkbox name="skills" value="communication" ref={register}>
+              Communication
             </Checkbox>
-            <Checkbox name="skills" value="skill 2" ref={register}>
-              Skill 2
+            <Checkbox name="skills" value="organization" ref={register}>
+              Organization
             </Checkbox>
-            <Checkbox name="skills" value="skill 3" ref={register}>
-              Skill 3
+            <Checkbox name="skills" value="teamwork" ref={register}>
+              Teamwork
             </Checkbox>
-            <Checkbox name="skills" value="skill 4" ref={register}>
-              Skill 4
+            <Checkbox name="skills" value="creativity" ref={register}>
+              Creativity
             </Checkbox>
-            <Checkbox name="skills" value="skill 5" ref={register}>
-              Skill 5
+            <Checkbox name="skills" value="problem solving" ref={register}>
+              Problem solving
             </Checkbox>
           </Stack>
         </FormControl>
