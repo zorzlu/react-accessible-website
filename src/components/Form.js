@@ -8,6 +8,7 @@ import {
   Button,
   Stack,
   Checkbox,
+  Text,
   Textarea,
 } from '@chakra-ui/react';
 
@@ -62,7 +63,14 @@ const Form = () => {
       </div>
       <Stack spacing={2}>
         <FormControl isInvalid={errors.firstname}>
-          <FormLabel htmlFor="name">First name</FormLabel>
+          <Text textStyle="p" color="tomato">
+            All required field are displayed in red and marked with an asterisk
+            *.
+          </Text>
+          <br></br>
+          <FormLabel htmlFor="name" color="tomato">
+            First name*
+          </FormLabel>
           <Input
             name="firstname"
             placeholder="First name"
@@ -75,7 +83,9 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={errors.lastname}>
-          <FormLabel htmlFor="name">Last name</FormLabel>
+          <FormLabel htmlFor="name" color="tomato">
+            Last name*
+          </FormLabel>
           <Input
             name="lastname"
             placeholder="Last name"
@@ -88,7 +98,9 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={errors.email}>
-          <FormLabel htmlFor="name">Email</FormLabel>
+          <FormLabel htmlFor="name" color="tomato">
+            Email*
+          </FormLabel>
           <Input
             name="email"
             placeholder="Email"
@@ -101,7 +113,9 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl isInvalid={errors.phone}>
-          <FormLabel htmlFor="name">Phone number</FormLabel>
+          <FormLabel htmlFor="name" color="tomato">
+            Phone number*
+          </FormLabel>
           <Input
             name="phone"
             placeholder="Phone number"
