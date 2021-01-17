@@ -10,7 +10,6 @@ import {
   Box,
   Button,
   Flex,
-  Text,
   Divider,
   SimpleGrid,
   Heading,
@@ -51,7 +50,7 @@ function buildFilters(
   return [resultFilter, emptyFilter];
 }
 
-function filterTextOnBar(queryP) {
+/* function filterTextOnBar(queryP) {
   let counter = 0;
   Object.keys(queryP).forEach((keyQ) => {
     counter += queryP[keyQ].length;
@@ -60,7 +59,7 @@ function filterTextOnBar(queryP) {
     return '1 filter applied.';
   }
   return counter + ' filters applied.';
-}
+} */
 
 function EventFiltersAndCards({ db }) {
   const [query, updateQueryParams] = useQueryAsState(
@@ -88,9 +87,6 @@ function EventFiltersAndCards({ db }) {
                 </Box>
                 <AccordionIcon />
               </Button>
-              <Text px="1rem" py="0.5rem">
-                {filterTextOnBar(query)}
-              </Text>
             </Flex>
             <AccordionPanel py="2em">
               <SimpleGrid

@@ -10,6 +10,10 @@ import colors from './foundations/colors';
 // Component style overrides
 import Container from './components/container';
 import Accordion from './components/accordion';
+import FormError from './components/formError';
+import Checkbox from './components/checkbox';
+import Input from './components/input';
+import Textarea from './components/textarea';
 
 const overrides = {
   styles,
@@ -20,6 +24,10 @@ const overrides = {
   components: {
     Container,
     Accordion,
+    FormError,
+    Checkbox,
+    Input,
+    Textarea,
     // Other components go here
   },
 };

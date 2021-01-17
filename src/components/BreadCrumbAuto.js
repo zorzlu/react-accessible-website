@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BreadcrumbItem, BreadcrumbLink, Breadcrumb } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useParams } from 'react-router-dom';
 
-function BreadCrumbAuto({ id, name, isFormPage }) {
+function BreadCrumbAuto({ db, isFormPage }) {
   var filtersApplied = false;
   var appendToEvent = '';
   /* 
@@ -14,27 +14,20 @@ function BreadCrumbAuto({ id, name, isFormPage }) {
     filtersApplied = true;
   } */
 
-  if (isFormPage) {
-    return (
-      <Breadcrumb>
-        <BreadcrumbItem>
-          <BreadcrumbLink as={RouterLink} to={'/events' + appendToEvent}>
-            {filtersApplied ? 'Events filtered List' : 'Events'}
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem>
-          <BreadcrumbLink as={RouterLink} to={'/event/' + id + appendToEvent}>
-            {name}
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>Join Event</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-    );
+  let { eventId } = useParams();
+  let name;
+  var result = db.events.filter((obj) => {
+    return obj.id == eventId;
+  });
+  if (result.length === 0) {
+    name = 'Event not found';
   } else {
+    name = result[0].name;
+  }
+
+  if (isFormPage === 0) {
     return (
-      <Breadcrumb>
+      <Breadcrumb mt="2em">
         <BreadcrumbItem>
           <BreadcrumbLink as={RouterLink} to={'/events' + appendToEvent}>
             {filtersApplied ? 'Events filtered List' : 'Events'}
@@ -45,13 +38,35 @@ function BreadCrumbAuto({ id, name, isFormPage }) {
         </BreadcrumbItem>
       </Breadcrumb>
     );
+  } else {
+    return (
+      <Breadcrumb mt="2em">
+        <BreadcrumbItem>
+          <BreadcrumbLink as={RouterLink} to={'/events' + appendToEvent}>
+            {filtersApplied ? 'Events filtered List' : 'Events'}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <BreadcrumbLink
+            as={RouterLink}
+            to={'/event/' + eventId + appendToEvent}
+          >
+            {name}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink>
+            {isFormPage === 1 ? 'Join Event' : 'Registered'}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+    );
   }
 }
 
 BreadCrumbAuto.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  isFormPage: PropTypes.bool.isRequired,
+  db: PropTypes.object.isRequired,
+  isFormPage: PropTypes.number.isRequired,
 };
 
 export default BreadCrumbAuto;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link, Heading, Text } from '@chakra-ui/react';
+import { Link, Heading } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import { LiveMessage } from 'react-aria-live';
 import { EventFiltersAndCards } from '../components';
@@ -42,7 +42,7 @@ class Events extends Component {
           <Heading as="h1" size="xl">
             Events
           </Heading>
-          <Text textStyle="p">This is the Events page.</Text>
+          {/* <Text textStyle="p">This is the Events page.</Text> */}
         </header>
         <EventFiltersAndCards db={this.props.db} />
       </>

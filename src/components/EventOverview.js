@@ -23,7 +23,7 @@ const EventOverview = ({ eventdetails }) => {
     <>
       <header>
         <Image
-          my="2em"
+          mb="2em"
           w="100%"
           h="30vh"
           maxH="20em"
@@ -61,11 +61,10 @@ const EventOverview = ({ eventdetails }) => {
           <Box mt="1em">
             <Button
               as={RouterLink}
-              to={'/event/' + eventdetails['id'] + '/register'}
-              variant="outline"
+              to={'/event/' + eventdetails['id'] + '/join'}
               colorScheme="brand"
             >
-              Apply now
+              Join Event
             </Button>
           </Box>
         </SimpleGrid>

@@ -39,7 +39,6 @@ function Card({ eventDetails, startingHeading, ...rest }) {
       onClick={() => handleClickOnCard()}
       margin="0.75em"
       maxW={[null, '24rem', '20rem', '18rem']}
-      h={[null, '20rem']}
       borderRadius="lg"
       boxShadow="none"
       bg="white"
@@ -51,8 +50,7 @@ function Card({ eventDetails, startingHeading, ...rest }) {
         as="article"
         className="card"
         direction="column"
-        maxW="inherit"
-        h="inherit"
+        h="100%"
         borderRadius="lg"
         overflow="hidden"
         boxShadow="md"

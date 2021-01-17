@@ -9,9 +9,10 @@ import {
   JoinEvent,
   EventDetails,
   PageNotFound,
+  Registered,
 } from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Footer, Header, Navigation } from './components';
+import { Footer, Header, Logo, Navigation, BreadCrumbAuto } from './components';
 import { OurTheme } from './theme';
 import { LiveAnnouncer } from 'react-aria-live';
 import EventChecker from './pages/EventChecker';
@@ -44,19 +45,43 @@ class App extends React.Component {
         <LiveAnnouncer>
           <ChakraProvider theme={OurTheme}>
             <Router>
-              <div id="accessibilityLinks">
-                <div ref={this.contentContainer} tabIndex="-1" />
-                <SkipNavLink id="navigation" zIndex="1000">
-                  Skip to Navigation
-                </SkipNavLink>
-                <SkipNavLink id="main" zIndex="1000">
-                  Skip to Main Content
-                </SkipNavLink>
-              </div>
               <Header as="header">
+                <div id="accessibilityLinks">
+                  <div ref={this.contentContainer} tabIndex="-1" />
+                  <SkipNavLink id="navigation" zIndex="1000">
+                    Skip to Navigation
+                  </SkipNavLink>
+                  <SkipNavLink id="main" zIndex="1000">
+                    Skip to Main Content
+                  </SkipNavLink>
+                </div>
+                <Logo position="absolute" />
                 <SkipNavContent id="navigation">
                   <Navigation />
                 </SkipNavContent>
+                <Switch>
+                  <Route
+                    path="/event/:eventId/join"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={1} />
+                    )}
+                  />
+                  <Route
+                    path="/event/:eventId/registered"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={2} />
+                    )}
+                  />
+                  <Route
+                    path="/event/:eventId"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={0} />
+                    )}
+                  />
+                </Switch>
               </Header>
 
               <SkipNavContent id="main" as="main">
@@ -75,13 +100,24 @@ class App extends React.Component {
                       component={() => <About setNewPage={this.setNewPage} />}
                     />
                     <Route
-                      path="/event/:eventId/register"
+                      path="/event/:eventId/join"
                       exact
                       component={() => (
                         <EventChecker
                           db={this.props.db}
                           setNewPage={this.setNewPage}
                           PageToLoad={JoinEvent}
+                        />
+                      )}
+                    />
+                    <Route
+                      path="/event/:eventId/registered"
+                      exact
+                      component={() => (
+                        <EventChecker
+                          db={this.props.db}
+                          setNewPage={this.setNewPage}
+                          PageToLoad={Registered}
                         />
                       )}
                     />

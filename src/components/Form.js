@@ -8,11 +8,16 @@ import {
   Button,
   Stack,
   Checkbox,
+  Text,
   Textarea,
+  CheckboxGroup,
 } from '@chakra-ui/react';
+import { useHistory, useParams } from 'react-router-dom';
 
 const Form = () => {
   const { handleSubmit, errors, register, formState } = useForm();
+  let history = useHistory();
+  let { eventId } = useParams();
 
   function validateFirstName(value) {
     if (!value) {
@@ -49,102 +54,117 @@ const Form = () => {
     console.log(values);
     return new Promise((resolve) => {
       setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
+        history.push('/event/' + eventId + '/registered');
+
         resolve();
       }, 3000);
     });
   }
 
   return (
-    <form aria-labelledby="formHiddenId" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      aria-labelledby="formHiddenId"
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+    >
       <div hidden id="formHiddenId">
         Registration Form
       </div>
+      <Text textStyle="p">
+        All required field are marked with an asterisk *.
+      </Text>
       <Stack spacing={2}>
-        <FormControl isInvalid={errors.firstname}>
-          <FormLabel htmlFor="name">First name</FormLabel>
+        <FormControl
+          id="firstnameFormField"
+          isInvalid={errors.firstname}
+          isRequired
+        >
+          <FormLabel mt="1em">First name</FormLabel>
           <Input
             name="firstname"
-            placeholder="First name"
+            placeholder="Joe"
             ref={register({ validate: validateFirstName })}
-            aria-label="Firstname"
-            bg="white"
           />
           <FormErrorMessage>
             {errors.firstname && errors.firstname.message}
           </FormErrorMessage>
         </FormControl>
-        <FormControl isInvalid={errors.lastname}>
-          <FormLabel htmlFor="name">Last name</FormLabel>
+        <FormControl
+          autoComplete="given-name"
+          id="lastnameFormField"
+          isInvalid={errors.lastname}
+          isRequired
+        >
+          <FormLabel mt="1em">Last name</FormLabel>
           <Input
+            autoComplete="family-name"
             name="lastname"
-            placeholder="Last name"
+            placeholder="Smith"
             ref={register({ validate: validateLastName })}
-            aria-label="Lasttname"
-            bg="white"
           />
           <FormErrorMessage>
             {errors.lastname && errors.lastname.message}
           </FormErrorMessage>
         </FormControl>
-        <FormControl isInvalid={errors.email}>
-          <FormLabel htmlFor="name">Email</FormLabel>
+        <FormControl id="emailFormField" isInvalid={errors.email} isRequired>
+          <FormLabel mt="1em">Email</FormLabel>
           <Input
+            autoComplete="email"
             name="email"
-            placeholder="Email"
+            type="email"
+            placeholder="joesmith@example.com"
             ref={register({ validate: validateEmail })}
-            aria-label="Email"
-            bg="white"
           />
           <FormErrorMessage>
             {errors.email && errors.email.message}
           </FormErrorMessage>
         </FormControl>
-        <FormControl isInvalid={errors.phone}>
-          <FormLabel htmlFor="name">Phone number</FormLabel>
+        <FormControl id="phoneFormField" isInvalid={errors.phone} isRequired>
+          <FormLabel mt="1em">Phone number</FormLabel>
           <Input
+            autoComplete="tel-national"
             name="phone"
-            placeholder="Phone number"
+            placeholder="91 330 2800"
             ref={register({ validate: validatePhone })}
-            aria-label="Phone number"
-            bg="white"
           />
           <FormErrorMessage>
             {errors.phone && errors.phone.message}
           </FormErrorMessage>
         </FormControl>
-        <FormControl>
-          <FormLabel htmlFor="skills">Skills</FormLabel>
-          <Stack pl={6} mt={1} spacing={1}>
-            <Checkbox name="skills" value="skill 1" ref={register}>
-              Skill 1
-            </Checkbox>
-            <Checkbox name="skills" value="skill 2" ref={register}>
-              Skill 2
-            </Checkbox>
-            <Checkbox name="skills" value="skill 3" ref={register}>
-              Skill 3
-            </Checkbox>
-            <Checkbox name="skills" value="skill 4" ref={register}>
-              Skill 4
-            </Checkbox>
-            <Checkbox name="skills" value="skill 5" ref={register}>
-              Skill 5
-            </Checkbox>
-          </Stack>
+        <FormControl id="skillsFormField">
+          <FormLabel mt="1em" as="legend" htmlFor="skills">
+            Skills
+          </FormLabel>
+          <CheckboxGroup>
+            <Stack pl="1em" mt={1} spacing={1}>
+              <Checkbox name="skills" value="communication" ref={register}>
+                Communication
+              </Checkbox>
+              <Checkbox name="skills" value="organization" ref={register}>
+                Organization
+              </Checkbox>
+              <Checkbox name="skills" value="teamwork" ref={register}>
+                Teamwork
+              </Checkbox>
+              <Checkbox name="skills" value="creativity" ref={register}>
+                Creativity
+              </Checkbox>
+              <Checkbox name="skills" value="problemsolving" ref={register}>
+                Problem solving
+              </Checkbox>
+            </Stack>
+          </CheckboxGroup>
         </FormControl>
-        <FormControl>
-          <FormLabel htmlFor="motivation">Motivation</FormLabel>
+        <FormControl id="motivationFormField">
+          <FormLabel mt="1em">Motivation</FormLabel>
           <Textarea
             name="motivation"
-            aria-label="Motivation"
             placeholder="Here you can type in your motivation"
             ref={register}
-            bg="white"
           />
         </FormControl>
         <Button
-          mt={4}
+          mt="2em"
           colorScheme="brand"
           isLoading={formState.isSubmitting}
           type="submit"
