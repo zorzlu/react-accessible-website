@@ -20,7 +20,7 @@ const Grid = () => {
       <TableCaption>CommunityMate numbers</TableCaption>
       <Thead role="rowgroup">
         <Tr role="row">
-          <Th role="columnheader"></Th>
+          <Th role="columnheader">Year</Th>
           <Th role="columnheader">2020</Th>
           <Th role="columnheader">2021</Th>
         </Tr>
