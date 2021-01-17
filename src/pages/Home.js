@@ -52,16 +52,16 @@ class Home extends Component {
             How to join an event
           </Heading>
           <OrderedList>
-            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="xl">
               Browse our wide selection of events.
             </ListItem>
-            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="xl">
               Filter events by topic and location to find your best match.
             </ListItem>
-            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="xl">
               Apply to your chosen event and fill in the form.
             </ListItem>
-            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="lg">
+            <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="xl">
               Now you only have to attend and enjoy!
             </ListItem>
           </OrderedList>
@@ -77,7 +77,7 @@ class Home extends Component {
             startHeading="3"
           />
           <Center mt="3em">
-            <Button as={RouterLink} to="/events/" colorScheme="brand">
+            <Button as={RouterLink} to="/events" colorScheme="brand">
               Discover More events
             </Button>
           </Center>

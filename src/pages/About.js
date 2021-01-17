@@ -43,7 +43,7 @@ class About extends Component {
               <Heading as="h2" size="md" fontWeight="bold">
                 Our Story
               </Heading>
-              <Text fontSize="lg" fontWeight="normal" lineHeight={2}>
+              <Text fontWeight="normal" lineHeight={1.5}>
                 Launched at the end of 2020, we first set out to create a bridge
                 between people that want to have a greater impact into society
                 and associations that offer interesting opportunities. Every
@@ -74,14 +74,14 @@ class About extends Component {
             Our goals
           </Heading>
           <UnorderedList>
-            <ListItem lineHeight={2.5} fontSize="lg">
+            <ListItem lineHeight={2.5} fontSize="md">
               Connect people with volunteering associations and increase social
               awareness.
             </ListItem>
-            <ListItem lineHeight={2.5} fontSize="lg">
+            <ListItem lineHeight={2.5} fontSize="md">
               Increase community engagement.
             </ListItem>
-            <ListItem lineHeight={2.5} fontSize="lg">
+            <ListItem lineHeight={2.5} fontSize="md">
               Inspire people to be open-minded and to learn.
             </ListItem>
           </UnorderedList>
@@ -96,7 +96,7 @@ class About extends Component {
           <Heading as="h2" size="md" mt="3em" fontWeight="bold" mb="1em">
             Contact Information
           </Heading>
-          <Text textStyle="paragraph" lineHeight={2} fontSize="lg">
+          <Text textStyle="paragraph" lineHeight={2} fontSize="md">
             {'You can contact us at: +34 636 801 400'}
           </Text>
         </section>

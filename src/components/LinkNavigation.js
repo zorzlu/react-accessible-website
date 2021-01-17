@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function LinkNavigation({ to, children, ...rest }) {
   const { pathname } = useLocation();
 
-  const isActive = Boolean(pathname === to);
+  const isActive = Boolean(pathname === to || pathname === to + '/');
 
   return (
     <Button

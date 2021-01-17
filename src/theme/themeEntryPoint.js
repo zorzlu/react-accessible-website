@@ -10,6 +10,7 @@ import colors from './foundations/colors';
 // Component style overrides
 import Container from './components/container';
 import Accordion from './components/accordion';
+import FormError from './components/formError';
 
 const overrides = {
   styles,
@@ -20,6 +21,7 @@ const overrides = {
   components: {
     Container,
     Accordion,
+    FormError,
     // Other components go here
   },
 };
