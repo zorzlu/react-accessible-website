@@ -35,7 +35,12 @@ export default function Hero() {
             <Heading as="h2" size="xl" fontWeight="bold">
               The Platform
             </Heading>
-            <Text fontSize="xl" fontWeight="normal" lineHeight={1.5}>
+            <Text
+              maxW="70ch"
+              fontSize="xl"
+              fontWeight="normal"
+              lineHeight={1.5}
+            >
               Through CommunityMate you can discover volunteering events from
               all kind of fields in Madrid. You will achieve impactful outcomes
               by connecting with nonprofit associations in your area.

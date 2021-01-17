@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Center, Container } from '@chakra-ui/react';
-import { Logo } from '.';
 
 const Header = ({ children, ...props }) => {
   return (
-    <Center py="1.5em" px={[null, null, '1.5em']} {...props}>
-      <Container maxW="75em">
-        <Logo position="absolute" />
+    <Center {...props}>
+      <Container maxW="70em" py="1.5em" px={{ base: '1em', sm: '2em' }}>
         {children}
       </Container>
     </Center>

@@ -23,7 +23,7 @@ const EventOverview = ({ eventdetails }) => {
     <>
       <header>
         <Image
-          my="2em"
+          mb="2em"
           w="100%"
           h="30vh"
           maxH="20em"

@@ -73,7 +73,7 @@ function CardsSection({ events, queryParams, startHeading }) {
   ));
   return (
     <>
-      <Text textStyle="p" aria-live="polite">
+      <Text role="status" textStyle="p">
         {a11yMessage}
       </Text>
 

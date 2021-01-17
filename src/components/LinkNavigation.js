@@ -18,6 +18,7 @@ function LinkNavigation({ to, children, ...rest }) {
       isActive={isActive}
       color="black"
       aria-current={isActive ? 'page' : null}
+      _hover={{ borderBottom: '0.2em solid' }}
       {...rest}
     >
       {children}

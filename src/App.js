@@ -11,7 +11,7 @@ import {
   PageNotFound,
 } from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Footer, Header, Navigation } from './components';
+import { Footer, Header, Logo, Navigation, BreadCrumbAuto } from './components';
 import { OurTheme } from './theme';
 import { LiveAnnouncer } from 'react-aria-live';
 import EventChecker from './pages/EventChecker';
@@ -44,19 +44,36 @@ class App extends React.Component {
         <LiveAnnouncer>
           <ChakraProvider theme={OurTheme}>
             <Router>
-              <div id="accessibilityLinks">
-                <div ref={this.contentContainer} tabIndex="-1" />
-                <SkipNavLink id="navigation" zIndex="1000">
-                  Skip to Navigation
-                </SkipNavLink>
-                <SkipNavLink id="main" zIndex="1000">
-                  Skip to Main Content
-                </SkipNavLink>
-              </div>
               <Header as="header">
+                <div id="accessibilityLinks">
+                  <div ref={this.contentContainer} tabIndex="-1" />
+                  <SkipNavLink id="navigation" zIndex="1000">
+                    Skip to Navigation
+                  </SkipNavLink>
+                  <SkipNavLink id="main" zIndex="1000">
+                    Skip to Main Content
+                  </SkipNavLink>
+                </div>
+                <Logo position="absolute" />
                 <SkipNavContent id="navigation">
                   <Navigation />
                 </SkipNavContent>
+                <Switch>
+                  <Route
+                    path="/event/:eventId/register"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={true} />
+                    )}
+                  />
+                  <Route
+                    path="/event/:eventId"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={false} />
+                    )}
+                  />
+                </Switch>
               </Header>
 
               <SkipNavContent id="main" as="main">

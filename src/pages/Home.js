@@ -40,7 +40,12 @@ class Home extends Component {
               boxSize="120px"
               rounded="1rem"
             />
-            <Text fontSize="xl" fontWeight="normal" lineHeight={1.5}>
+            <Text
+              maxW="70ch"
+              fontSize="xl"
+              fontWeight="normal"
+              lineHeight={1.5}
+            >
               {
                 'It has always been our mission to help people all around reach their potential and bring their impact into society. We believe that volunteering is the key to individuals obtaining a deeper understanding of the world, and that the world is a better place when people have a deeper empathy. '
               }
@@ -51,7 +56,7 @@ class Home extends Component {
           <Heading as="h2" size="xl" fontWeight="bold" mt="2em" mb="1em">
             How to join an event
           </Heading>
-          <OrderedList>
+          <OrderedList maxW="70ch">
             <ListItem textStyle="paragraph" lineHeight={2.5} fontSize="xl">
               Browse our wide selection of events.
             </ListItem>

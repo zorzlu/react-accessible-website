@@ -75,7 +75,7 @@ const Form = () => {
           isInvalid={errors.firstname}
           isRequired
         >
-          <FormLabel>First name</FormLabel>
+          <FormLabel mt="1em">First name</FormLabel>
           <Input
             name="firstname"
             placeholder="Joe"
@@ -91,7 +91,7 @@ const Form = () => {
           isInvalid={errors.lastname}
           isRequired
         >
-          <FormLabel>Last name</FormLabel>
+          <FormLabel mt="1em">Last name</FormLabel>
           <Input
             autoComplete="family-name"
             name="lastname"
@@ -103,7 +103,7 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl id="emailFormField" isInvalid={errors.email} isRequired>
-          <FormLabel>Email</FormLabel>
+          <FormLabel mt="1em">Email</FormLabel>
           <Input
             autoComplete="email"
             name="email"
@@ -116,7 +116,7 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl id="phoneFormField" isInvalid={errors.phone} isRequired>
-          <FormLabel>Phone number</FormLabel>
+          <FormLabel mt="1em">Phone number</FormLabel>
           <Input
             autoComplete="tel-national"
             name="phone"
@@ -128,11 +128,11 @@ const Form = () => {
           </FormErrorMessage>
         </FormControl>
         <FormControl id="skillsFormField">
-          <FormLabel as="legend" htmlFor="skills">
+          <FormLabel mt="1em" as="legend" htmlFor="skills">
             Skills
           </FormLabel>
           <CheckboxGroup>
-            <Stack pl={6} mt={1} spacing={1}>
+            <Stack pl="1em" mt={1} spacing={1}>
               <Checkbox name="skills" value="communication" ref={register}>
                 Communication
               </Checkbox>
@@ -152,7 +152,7 @@ const Form = () => {
           </CheckboxGroup>
         </FormControl>
         <FormControl id="motivationFormField">
-          <FormLabel>Motivation</FormLabel>
+          <FormLabel mt="1em">Motivation</FormLabel>
           <Textarea
             name="motivation"
             placeholder="Here you can type in your motivation"
@@ -160,7 +160,7 @@ const Form = () => {
           />
         </FormControl>
         <Button
-          mt={4}
+          mt="2em"
           colorScheme="brand"
           isLoading={formState.isSubmitting}
           type="submit"

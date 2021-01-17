@@ -34,30 +34,32 @@ class EventDetails extends Component {
           }
           aria-live="polite"
         />
-        {/* <BreadCrumbAuto
-          id={this.props.details.id}
-          name={this.props.details.name}
-          isFormPage={false}
-        /> */}
         <article>
           <EventOverview eventdetails={this.props.details} />
           <section>
             <Heading as="h2" size="md" fontWeight="bold" mt="3em" mb="1em">
               Description of the event
             </Heading>
-            <Text maxW="48em" textStyle="p">
+            <Text maxW="70ch" textStyle="p">
               {this.props.details.longDescription}
             </Text>
           </section>
           <section>
-            <Heading as="h2" size="md" fontWeight="bold" mt="3em" mb="1em">
+            <Heading
+              as="h2"
+              size="md"
+              maxW="80ch"
+              fontWeight="bold"
+              mt="3em"
+              mb="1em"
+            >
               Activities
             </Heading>
-            <UnorderedList pb="3em">
+            <UnorderedList pb="3em" maxW="70ch">
               {this.props.details.activities.map((listitem) => (
                 <ListItem
                   lineHeight={2.5}
-                  fontSize="lg"
+                  fontSize="md"
                   key={strConv(listitem) + '-activity'}
                 >
                   {listitem}

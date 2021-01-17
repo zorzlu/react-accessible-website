@@ -74,7 +74,7 @@ const Navigation = () => {
       height="inherit"
       justify="space-between"
       wrap="wrap"
-      maxW="75em"
+      maxW="70em"
       w={[null, null, '20 rem']}
       bg="transparent"
       borderColor="black"
