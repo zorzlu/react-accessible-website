@@ -3,8 +3,8 @@
     {
       "id": 0,
       "name": "Cook Assistant in Nursing Home",
-      "tag": ["food", "cook"],
-      "dateTime": "2021-01-15T23:00:00.266Z",
+      "tag": ["food", "elderly"],
+      "dateTime": "2021-01-15T13:00:00.266Z",
       "location": "Castellana",
       "full": false,
       "association": "Hillview Nursing Home",
@@ -25,8 +25,8 @@
     {
       "id": 1,
       "name": "Music club",
-      "tag": ["music", "instruments"],
-      "dateTime": "2021-01-22T23:00:00.266Z",
+      "tag": ["music", "youth"],
+      "dateTime": "2021-01-22T13:00:00.266Z",
       "location": "Paseo del Arte",
       "full": false,
       "association": "Youth Music Club",
@@ -47,8 +47,8 @@
     {
       "id": 2,
       "name": "Clean Parks",
-      "tag": ["park", "clean"],
-      "dateTime": "2021-02-10T23:00:00.266Z",
+      "tag": ["environment"],
+      "dateTime": "2021-02-10T13:00:00.266Z",
       "location": "Retiro",
       "full": false,
       "association": "CleanGreens",
@@ -69,9 +69,31 @@
     },
     {
       "id": 3,
+      "name": "Food on the street",
+      "tag": ["food", "homeless"],
+      "dateTime": "2021-02-15T11:00:00.266Z",
+      "location": "Casa de Campo",
+      "full": false,
+      "association": "AngelsOfTheStreet",
+      "phone": "+34 630 254 300",
+      "headerText": "Bring meals to homeless people.",
+      "longDescription": [
+        "Every Monday we donate 3 hours of our time to people less lucky than us. We buy some food, and we walk around the city to give it to the homeless. It is an always-new experience as you get to know new stories.",
+        "This pandemic increased the number of the poor and the snow of January worsened the situation. We want to bring more warm food to the people in need.",
+        "You will discover the power of saying to a new friend \"Have a good dinner!\", \"Have a good night!\". It's not just a food delivery service. It is an opportunity to meet them and to get to know them better. Join us! It will be fantastic, and you will build strong bonds.  "
+      ],
+      "activities": [
+        "Prepare some warm food",
+        "Distribute the food to homeless"
+      ],
+      "pictures": ["/pics/centralefs.jpg"],
+      "altPictures": ["Volunteers distribuiting food to homeless people."]
+    },
+    {
+      "id": 4,
       "name": "Knit for Homeless Charities",
-      "tag": ["knit"],
-      "dateTime": "2021-03-04T23:00:00.266Z",
+      "tag": ["homeless", "community"],
+      "dateTime": "2021-03-04T13:00:00.266Z",
       "location": "La Latina",
       "full": false,
       "association": "Revived",
@@ -90,10 +112,10 @@
       "altPictures": ["Two hands knitting"]
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "Meals on Wheels",
-      "tag": ["food", "deliver"],
-      "dateTime": "2021-03-22T23:00:00.266Z",
+      "tag": ["food", "community"],
+      "dateTime": "2021-03-22T13:00:00.266Z",
       "location": "Casa de Campo",
       "full": false,
       "association": "DriveMeet",
@@ -110,10 +132,10 @@
       "altPictures": ["Man putting a package in car"]
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "Volunteer Gardener",
-      "tag": ["gardening", "plant"],
-      "dateTime": "2021-04-03T23:00:00.266Z",
+      "tag": ["environment", "community"],
+      "dateTime": "2021-04-03T13:00:00.266Z",
       "location": "Austrias",
       "full": false,
       "association": "Cherry Orchard Community Garden",
@@ -131,10 +153,10 @@
       "altPictures": ["A person planting a green plant"]
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Coach Volunteer",
-      "tag": ["bowling", "sports"],
-      "dateTime": "2021-04-03T23:00:00.266Z",
+      "tag": ["sport", "disabled"],
+      "dateTime": "2021-04-03T13:00:00.266Z",
       "location": "La Latina",
       "full": false,
       "association": "BowlClub",
@@ -152,27 +174,23 @@
       "altPictures": ["A person wearing a coach T-shirt"]
     }
   ],
-  "recommendedEvents": [1, 2, 3, 4],
+  "recommendedEvents": [1, 2, 4, 5],
   "location": [
-    "Castellana",
-    "Paseo del Arte",
-    "Retiro",
-    "La Latina",
+    "Austrias",
     "Casa de Campo",
-    "Austrias"
+    "Castellana",
+    "La Latina",
+    "Paseo del Arte",
+    "Retiro"
   ],
   "tag": [
+    "community",
+    "disabled",
+    "elderly",
+    "environment",
     "food",
-    "cook",
+    "homeless",
     "music",
-    "instruments",
-    "park",
-    "call",
-    "clean",
-    "knit",
-    "deliver",
-    "gardening",
-    "plant",
-    "sports"
+    "sport"
   ]
 }

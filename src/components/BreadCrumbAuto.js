@@ -25,7 +25,20 @@ function BreadCrumbAuto({ db, isFormPage }) {
     name = result[0].name;
   }
 
-  if (isFormPage) {
+  if (isFormPage === 0) {
+    return (
+      <Breadcrumb mt="2em">
+        <BreadcrumbItem>
+          <BreadcrumbLink as={RouterLink} to={'/events' + appendToEvent}>
+            {filtersApplied ? 'Events filtered List' : 'Events'}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink>{name}</BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
+    );
+  } else {
     return (
       <Breadcrumb mt="2em">
         <BreadcrumbItem>
@@ -42,20 +55,9 @@ function BreadCrumbAuto({ db, isFormPage }) {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>Join Event</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
-    );
-  } else {
-    return (
-      <Breadcrumb mt="2em">
-        <BreadcrumbItem>
-          <BreadcrumbLink as={RouterLink} to={'/events' + appendToEvent}>
-            {filtersApplied ? 'Events filtered List' : 'Events'}
+          <BreadcrumbLink>
+            {isFormPage === 1 ? 'Join Event' : 'Registered'}
           </BreadcrumbLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink>{name}</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
     );

@@ -12,9 +12,12 @@ import {
   Textarea,
   CheckboxGroup,
 } from '@chakra-ui/react';
+import { useHistory, useParams } from 'react-router-dom';
 
 const Form = () => {
   const { handleSubmit, errors, register, formState } = useForm();
+  let history = useHistory();
+  let { eventId } = useParams();
 
   function validateFirstName(value) {
     if (!value) {
@@ -51,7 +54,8 @@ const Form = () => {
     console.log(values);
     return new Promise((resolve) => {
       setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
+        history.push('/event/' + eventId + '/registered');
+
         resolve();
       }, 3000);
     });

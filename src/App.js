@@ -9,6 +9,7 @@ import {
   JoinEvent,
   EventDetails,
   PageNotFound,
+  Registered,
 } from './pages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Footer, Header, Logo, Navigation, BreadCrumbAuto } from './components';
@@ -60,17 +61,24 @@ class App extends React.Component {
                 </SkipNavContent>
                 <Switch>
                   <Route
-                    path="/event/:eventId/register"
+                    path="/event/:eventId/join"
                     exact
                     component={() => (
-                      <BreadCrumbAuto db={this.props.db} isFormPage={true} />
+                      <BreadCrumbAuto db={this.props.db} isFormPage={1} />
+                    )}
+                  />
+                  <Route
+                    path="/event/:eventId/registered"
+                    exact
+                    component={() => (
+                      <BreadCrumbAuto db={this.props.db} isFormPage={2} />
                     )}
                   />
                   <Route
                     path="/event/:eventId"
                     exact
                     component={() => (
-                      <BreadCrumbAuto db={this.props.db} isFormPage={false} />
+                      <BreadCrumbAuto db={this.props.db} isFormPage={0} />
                     )}
                   />
                 </Switch>
@@ -92,13 +100,24 @@ class App extends React.Component {
                       component={() => <About setNewPage={this.setNewPage} />}
                     />
                     <Route
-                      path="/event/:eventId/register"
+                      path="/event/:eventId/join"
                       exact
                       component={() => (
                         <EventChecker
                           db={this.props.db}
                           setNewPage={this.setNewPage}
                           PageToLoad={JoinEvent}
+                        />
+                      )}
+                    />
+                    <Route
+                      path="/event/:eventId/registered"
+                      exact
+                      component={() => (
+                        <EventChecker
+                          db={this.props.db}
+                          setNewPage={this.setNewPage}
+                          PageToLoad={Registered}
                         />
                       )}
                     />

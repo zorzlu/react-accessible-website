@@ -9,7 +9,7 @@ import {
   TableCaption,
 } from '@chakra-ui/react';
 
-const Grid = () => {
+const TableAbout = () => {
   return (
     <Table
       variant="simple"
@@ -20,19 +20,27 @@ const Grid = () => {
       <TableCaption>CommunityMate numbers</TableCaption>
       <Thead role="rowgroup">
         <Tr role="row">
-          <Th role="columnheader">Year</Th>
-          <Th role="columnheader">2020</Th>
-          <Th role="columnheader">2021</Th>
+          <Td></Td>
+          <Th scope="col" role="columnheader">
+            Year 2019
+          </Th>
+          <Th scope="col" role="columnheader">
+            Year 2020
+          </Th>
         </Tr>
       </Thead>
       <Tbody role="rowgroup">
         <Tr role="row">
-          <Td role="cell">Associations</Td>
+          <Th scope="row" role="rowheader">
+            Associations
+          </Th>
           <Td role="cell">15</Td>
           <Td role="cell">32</Td>
         </Tr>
         <Tr role="row">
-          <Td role="cell">Events</Td>
+          <Th scope="row" role="rowheader">
+            Events
+          </Th>
           <Td role="cell">44</Td>
           <Td role="cell">85</Td>
         </Tr>
@@ -41,4 +49,4 @@ const Grid = () => {
   );
 };
 
-export default Grid;
+export default TableAbout;

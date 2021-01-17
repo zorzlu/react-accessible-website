@@ -61,11 +61,10 @@ const EventOverview = ({ eventdetails }) => {
           <Box mt="1em">
             <Button
               as={RouterLink}
-              to={'/event/' + eventdetails['id'] + '/register'}
-              variant="outline"
+              to={'/event/' + eventdetails['id'] + '/join'}
               colorScheme="brand"
             >
-              Apply now
+              Join Event
             </Button>
           </Box>
         </SimpleGrid>

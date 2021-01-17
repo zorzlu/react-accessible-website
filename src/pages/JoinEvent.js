@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
 import PropTypes from 'prop-types';
 import Form from '../components/Form';
@@ -23,14 +23,13 @@ class JoinEvent extends React.Component {
           }
           aria-live="polite"
         />
-        {/*  <BreadCrumbAuto
-          id={this.props.details.id}
-          name={this.props.details.name}
-          isFormPage={true}
-        /> */}
+
         <Heading as="h1" size="xl">
-          {'Register to ' + this.props.details['name']}
+          {'Join event: ' + this.props.details['name']}
         </Heading>
+        <Text mt="1em">
+          Please fill the following form to register for this event.
+        </Text>
 
         <Box maxW="70ch">
           <Form role="form" />

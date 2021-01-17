@@ -11,7 +11,7 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { LiveMessage } from 'react-aria-live';
-import { Grid } from '../components';
+import { TableAbout } from '../components';
 
 class About extends Component {
   constructor(props) {
@@ -44,12 +44,12 @@ class About extends Component {
                 Our Story
               </Heading>
               <Text fontWeight="normal" lineHeight={1.5}>
-                Launched at the end of 2020, we first set out to create a bridge
-                between people that want to have a greater impact into society
-                and associations that offer interesting opportunities. Every
-                partner and volunteer who joined us since then, encouraged us to
-                believe and work harder on our mission. Today we are using all
-                of our resources to create an activated community and help
+                Launched at the start of 2019, we first set out to create a
+                bridge between people that want to have a greater impact into
+                society and associations that offer interesting opportunities.
+                Every partner and volunteer who joined us since then, encouraged
+                us to believe and work harder on our mission. Today we are using
+                all of our resources to create an activated community and help
                 people find their own way to see the world.
               </Text>
             </Stack>
@@ -90,7 +90,7 @@ class About extends Component {
           <Heading as="h2" size="md" mt="3em" fontWeight="bold" mb="1em">
             Our figures
           </Heading>
-          <Grid />
+          <TableAbout />
         </section>
         <section>
           <Heading as="h2" size="md" mt="3em" fontWeight="bold" mb="1em">

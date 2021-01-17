@@ -26,6 +26,14 @@ class EventDetails extends Component {
   }
 
   render() {
+    var descriptionText = this.props.details.longDescription.map(
+      (desc, index) => (
+        <Text key={index} maxW="70ch" textStyle="p">
+          {desc}
+        </Text>
+      )
+    );
+
     return (
       <React.Fragment>
         <LiveMessage
@@ -40,9 +48,7 @@ class EventDetails extends Component {
             <Heading as="h2" size="md" fontWeight="bold" mt="3em" mb="1em">
               Description of the event
             </Heading>
-            <Text maxW="70ch" textStyle="p">
-              {this.props.details.longDescription}
-            </Text>
+            {descriptionText}
           </section>
           <section>
             <Heading
@@ -70,11 +76,10 @@ class EventDetails extends Component {
 
           <Button
             as={RouterLink}
-            to={'/event/' + this.props.details['id'] + '/register'}
-            variant="outline"
+            to={'/event/' + this.props.details['id'] + '/join'}
             colorScheme="brand"
           >
-            Apply now
+            Join Event
           </Button>
         </article>
       </React.Fragment>
