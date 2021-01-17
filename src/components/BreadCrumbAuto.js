@@ -66,7 +66,7 @@ function BreadCrumbAuto({ db, isFormPage }) {
 
 BreadCrumbAuto.propTypes = {
   db: PropTypes.object.isRequired,
-  isFormPage: PropTypes.bool.isRequired,
+  isFormPage: PropTypes.number.isRequired,
 };
 
 export default BreadCrumbAuto;
