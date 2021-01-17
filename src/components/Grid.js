@@ -20,18 +20,21 @@ const Grid = () => {
       <TableCaption>CommunityMate numbers</TableCaption>
       <Thead role="rowgroup">
         <Tr role="row">
-          <Th role="columnheader">Partners</Th>
-          <Th role="columnheader">Events</Th>
+          <Th role="columnheader"></Th>
+          <Th role="columnheader">2020</Th>
+          <Th role="columnheader">2021</Th>
         </Tr>
       </Thead>
       <Tbody role="rowgroup">
         <Tr role="row">
-          <Td role="cell">15+ Associations</Td>
-          <Td role="cell">30+ Past events</Td>
+          <Td role="cell">Associations</Td>
+          <Td role="cell">15</Td>
+          <Td role="cell">32</Td>
         </Tr>
         <Tr role="row">
-          <Td role="cell">50+ Volunteers</Td>
-          <Td role="cell">45+ Upcoming events</Td>
+          <Td role="cell">Events</Td>
+          <Td role="cell">44</Td>
+          <Td role="cell">85</Td>
         </Tr>
       </Tbody>
     </Table>
