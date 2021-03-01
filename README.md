@@ -165,7 +165,7 @@ complete navigation map of the web site can be seen in Figure 1. As
 events are loaded from a database, the only page with \'static\' content
 is the 'About Us' one.
 
-![](docs\media\image33.png)
+![](\docs\media\image33.png)
 
 Figure 2.1. Sitemap
 
@@ -194,7 +194,7 @@ platform along with its mission statement. They are also provided with
 the application mechanism and with a preview of some of the available
 events.
 
-![](docs\media\image7.png)
+![](\docs\media\image7.png)
 
 Figure 2.2. HomePage
 
@@ -203,11 +203,11 @@ the left there is the CommunityMate **logo**, acting as a link to come
 back to the website's homepage. On the right, the main **navigation
 bar** is provided.
 
-![](docs\media\image17.png)
+![](\docs\media\image17.png)
 
-![](docs\media\image27.png)
+![](\docs\media\image27.png)
 
-![](docs\media\image32.png)
+![](\docs\media\image32.png)
 
 Figure 2.3. Header at different viewports. On small viewport, navbar collapsed and expanded
 
@@ -217,8 +217,8 @@ links can be separately seen, but they are grouped together in a
 hamburger menu when the screen size is reduced. The menu can be extended
 and closed also using the keyboard.
 
-![](docs\media\image18.png)
-![](docs\media\image28.png)
+![](\docs\media\image18.png)
+![](\docs\media\image28.png)
 
 Figure 2.4. Links to skip repeated content
 
@@ -247,7 +247,7 @@ component ([[Unordered List \|
 Chakra]](https://chakra-ui.com/docs/data-display/list)), but it is
 rendered using HTML standard list elements.
 
-![](docs\media\image5.png)
+![](\docs\media\image5.png)
 
 Figure 2.5. Application process in 'Home' page
 
@@ -264,14 +264,14 @@ Users can either choose to visit the page containing the event's
 information, by clicking on the card or accessing the 'Events' page
 using the link positioned after the list, as seen in Figure 2.6.
 
-![](docs\media\image34.png)
+![](\docs\media\image34.png)
 
 Figure 2.6. Recommended events section in 'Home' page
 
 The last element in the 'Home' page is the **footer**, which only
 contains a copyright notice.
 
-![](docs\media\image30.png)
+![](\docs\media\image30.png)
 
 Figure 2.7. Footer
 
@@ -287,7 +287,7 @@ event.
 As all of the other pages, the 'EventDetails' page contains the
 **header** and the **footer**.
 
-![](docs\media\image13.png)
+![](\docs\media\image13.png)
 
 Figure 2.8. Events page
 
@@ -302,8 +302,8 @@ as follows.
 
     -   List of events
 
-![](docs\media\image23.png)
-![](docs\media\image25.png)
+![](\docs\media\image23.png)
+![](\docs\media\image25.png)
 
 Figure 2.9. Filter Section collapsed and expanded
 
@@ -324,7 +324,7 @@ Chakra lacks the component, and the ones named as \'grids\' are simple
 CSS grids. We coded the functions necessary to enable the keyboard
 interaction and integrated those with the Chakra elements.
 
-![](docs\media\image26.png)
+![](\docs\media\image26.png)
 
 Figure 2.10. List of events and status message
 
@@ -339,7 +339,7 @@ The 'Event Details' web page contains a more detailed description of
 each event. According to the URL of the page, appropriate content is
 fetched.
 
-![](docs\media\image24.png)
+![](\docs\media\image24.png)
 
 Figure 2.11. Event details page
 
@@ -347,7 +347,7 @@ As all of the other pages, the 'EventDetails' page contains the
 **header** and the **footer**. However, the header is different from the
 one presented in the homepage.
 
-![](docs\media\image16.png)
+![](\docs\media\image16.png)
 
 Figure 2.12. Header with breadcrumb
 
@@ -390,7 +390,7 @@ does not lead to misunderstanding.
 The 'JoinEvent' web page contains a form users can fill in to join a
 particular event.
 
-![](docs\media\image14.png)
+![](\docs\media\image14.png)
 
 Figure 2.13. 'JoinEvent' page
 
@@ -418,7 +418,7 @@ Instructions are provided at the beginning, and error messages are
 generated if the required fields are not completed or if the data format
 is not correct.
 
-![](docs\media\image19.png)
+![](\docs\media\image19.png)
 
 Figure 2.14. Error messages on Form
 
@@ -433,7 +433,7 @@ with the project's current figures is also provided to present the
 platform's development better. In the end, contact information is
 displayed.
 
-![](docs\media\image10.png)
+![](\docs\media\image10.png)
 
 Figure 2.15. About Us page
 
@@ -495,7 +495,7 @@ adjustments were made.
         for the form is provided through the aria-labelledby
         attribute.
 
-![](docs\media\image22.png)
+![](\docs\media\image22.png)
 >
 Figure 3.1. Form element with correct name
 
@@ -512,7 +512,7 @@ Figure 3.1. Form element with correct name
         pointing the corresponding error description message and
         aria-invalid true.
 
-![](docs\media\image31.png)
+![](\docs\media\image31.png)
 >
 Figure 3.2. Text input field accessibility attributes and properties
 
@@ -528,7 +528,7 @@ Figure 3.2. Text input field accessibility attributes and properties
 -   autocomplete attributes are used to identify input purpose. Tokens
     used: 'given-name', 'family-name', 'email', 'tel-national'
 
-![](docs\media\image11.png)
+![](\docs\media\image11.png)
 >
 Figure 3.2 ARIA markup when invalid attribute is provided
 
@@ -545,9 +545,9 @@ Figure 3.2 ARIA markup when invalid attribute is provided
 
     -   When not checked, it has state aria-checked set to false.
 
-![](docs\media\image29.png)
+![](\docs\media\image29.png)
 >
-![](docs\media\image3.png)
+![](\docs\media\image3.png)
 >
 Figure 3.4. Computed properties for checkbox
 
@@ -583,7 +583,7 @@ selection.
     communicated to assistive technologies using elements with
     aria-live=polite attribute.
 
-![](docs\media\image15.png)
+![](\docs\media\image15.png)
 >
 Figure 3.5. Error message with aria-polite attribute
 
@@ -611,7 +611,7 @@ To implement these layout grids, the Chakra library was not sufficient.
 We had to write the JS functions to create the expected keyboard
 interaction and define the elements' correct roles.
 
-![](docs\media\image6.png)
+![](\docs\media\image6.png)
 
 Figure 3.6. Events page: (A) filters disclosure section, (B) checkboxes
 group,\
@@ -630,7 +630,7 @@ group,\
     -   The button has aria-controls value set to the id of the
         controlled element
 
-![](docs\media\image2.png)
+![](\docs\media\image2.png)
 >
 Figure 3.7. Edit Filters button accessibility attributes and
 properties
@@ -645,7 +645,7 @@ displayed on screen, the implementation is correct.
 
 -   The grid is labeled by the heading above it using aria-labelledby.
 
-![](docs\media\image12.png)
+![](\docs\media\image12.png)
 >
 Figure 3.8. grid element accessibility attributes and properties
 
@@ -654,7 +654,7 @@ Figure 3.8. grid element accessibility attributes and properties
 -   Each cell is contained in a row element and has a role gridcell as
     it does not contain header information.
 
-![](docs\media\image1.png)
+![](\docs\media\image1.png)
 >
 Figure 3.9. grid rows and gridcell hierarchy
 
@@ -671,7 +671,7 @@ Figure 3.9. grid rows and gridcell hierarchy
 
     -   When not checked, it has state aria-checked set to false.
 
-![](docs\media\image20.png)
+![](\docs\media\image20.png)
 >
 Figure 3.10. Checkbox accessibility attributes and properties
 
@@ -680,7 +680,7 @@ Figure 3.10. Checkbox accessibility attributes and properties
     -   The message has role status that triggers corresponding
         aria-live properties
 
-![](docs\media\image21.png)
+![](\docs\media\image21.png)
 >
 Figure 3.11. Status message accessibility attributes and properties
 
@@ -748,9 +748,9 @@ events retrieved. The aria-live region corresponding to \'status\' is
 \'polite\'. That means that if the message is not changed, AT is not
 notified.
 >
-![](docs\media\image8.png)
+![](\docs\media\image8.png)
 >
-![](docs\media\image4.png)
+![](\docs\media\image4.png)
 >
 Figure 3.12. Function to update the status message
 
@@ -769,7 +769,7 @@ the case of React client-side routing are analysed.
 
 ### 5.3.1. Cards
 
-![](docs\media\image9.png)
+![](\docs\media\image9.png)
 
 Figure 3.13. Card: (A) normal status, (B) card hovered, (C) link in card
 hovered
